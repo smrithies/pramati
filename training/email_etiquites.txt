@@ -1,0 +1,30 @@
+Guidelines to follow while writing a professionalemail.
+=======================================================
+
+=> Include a clear, direct, short subject line so that recipient will be able to understand content of email faster and open it.
+=> Creating message:
+> Begin with a greeting and for that use proper professional salutation(use either Hi or Hello).
+> First make a clear picture of purpose of email in beginning of the message.
+> Now move on to main text of the email and make sure that sentences are short and clear. Avoid spelling and grammar mistakes.
+> Before ending the email if prefer we can add some closing remarks like thanking the recipient.
+> End the email with appropriate closing along with name.(Thank you or sincerely can be used).
+
+=> Example
+  
+
+subject:Updated google sheet.
+
+Hi Aneesh,
+
+ I apologise for sending a mail which was not formal. From this email onwards I will follow strict guidelines for a professional email.
+
+I have updated google sheet accordingly.
+Please check it once.
+Sheet Link - https://github.com/smrithies/introduction/blob/master/githubbasics
+                    
+
+Thanks & Regards
+SMRITHI E S
+Associate Software Engineer
+Pramati Technologies
+
