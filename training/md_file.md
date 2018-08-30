@@ -10,6 +10,18 @@
 - Markdown is a text-to-HTML conversion tool for web writers.  
 - Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).  
 - Used for presenting documents on the web.  
-###plaintext file
+### plaintext file
 - This is a file that contains zero formatting (unlike RTF files), meaning nothing is bold, italic, underlined, colored, using a special font, etc.  
 - Several examples of plain text file formats include ones that end in XML, REG, BAT, PLS, M3U, M3U8, SRT, IES, AIR, STP, XSPF, DIZ, SFM, THEME, and TORRENT.
+
+## md syntax
+
+### Heading
+- #space<heading name>
+- ##space<heading>
+### Bold and Italics
+- bold -> *bold*
+- italics -> **italics**
+### Lists
+- bullets -> -,*,+
+- Numbers -> just give numbers in order.
