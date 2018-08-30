@@ -19,9 +19,13 @@
 ### Heading
 - #space<heading name>
 - ##space<heading>
+### Paragraph
+- Just put a blank line between sentences.
 ### Bold and Italics
 - bold -> *bold*
 - italics -> **italics**
 ### Lists
 - bullets -> -,*,+
 - Numbers -> just give numbers in order.
+### Links
+- This is [an example](http://www.example.com/) inline link
