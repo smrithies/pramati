@@ -1,4 +1,4 @@
-# Guidelines to follow while writing a professionalemail.
+# Guidelines to follow while writing a professional email.
 Email is both a major convenience and a ceaseless distraction. But, regardless of how you feel about it at the present moment, one thing’s for sure—it’s an unavoidable necessity. And, if we want to be professional and get a point across in a way that’s clear, that’s efficient, there are a few different etiquette rules we want to make sure to keep in mind.
 
 - Include a clear, direct, short subject line so that recipient will be able to understand content of email faster and open it.
@@ -14,7 +14,7 @@ Email is both a major convenience and a ceaseless distraction. But, regardless o
 - Before sending the email if prefer we can add some closing remarks like thanking the recipient.
 - End the email with appropriate closing along with name.(Thank you or sincerely can be used).
 
-** Example**
+**Example**
   
 
 subject:Updated google sheet.
