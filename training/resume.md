@@ -1,7 +1,5 @@
 ### SMRITHI E.S
-<img src="20229.JPG"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+<img src="20229.JPG" height="42" width="42"/>
 
 **Contact No:**         8606842022
 **E-mail:**             smrithies@gmail.com
@@ -14,7 +12,8 @@ As a fresher, I want to put to use my creative skills, technologies that I am fa
 |Educational qualification|Institution Name|Year of Passing|University|Aggregate to % or Marks|
 |----------|----------|----------|----------|----------|
 |B-Tech,Branch:-Information Technology(IT),Reg No:-EPAOEIT049|Govt.Engineering college Sreekrishnapuram Palakkad Dist|2018|Calicut|cgpa:-7.76|
-
+|12th|L.S.N.G.H.S.S,Ottapalam,Palakkad Dist|2013|HSE|92.4|
+|10th|L.S.N.G.H.S.S,Ottapalam,Palakkad Dist|2011|Kerala State Board|94|
 
 > ##### COMPUTER SKILLS
 C,JAVA,PYTHON,SQL,HTML,PHP,JAVASCRIPT
