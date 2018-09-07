@@ -48,13 +48,13 @@ C,JAVA,PYTHON,SQL,HTML,PHP,JAVASCRIPT
 
 
 > ##### PROJECTS OR TRAININGS UNDERTAKEN
-**Projects**
-  **BTech**
+**Projects**  
+  **BTech**  
 - ‘CONTENT BASED IMAGE RETRIEVAL USING DECISION TREE CLASSIFIER’ (done as Mini
 Project).
 - ‘SMART WASTE MANAGEMENT SYSTEM’.A waste bin which can provide attractive services in
 return for cleaner surroundings(Main project). 
-**Trainings**
+**Trainings**  
 - Network configuration-Accel It Academy,Palakkad
 
 
@@ -63,11 +63,11 @@ English, Malayalam, Hindi, Tamil (Avg).
 
 
 > ##### PERSONAL PROFILE
-Date of Birth:   02/11/1995
-Place of Birth:  Ottapalam, Palakkad
-Nationality:     Indian
-Marital Status:  Single
-Gender:          Female
+Date of Birth:   02/11/1995  
+Place of Birth:  Ottapalam, Palakkad  
+Nationality:     Indian  
+Marital Status:  Single  
+Gender:          Female  
 Contact Address: Karthika(H), Kizhur (PO)  
                  Panamanna (VIA),    
                  Palakkad (District),  
