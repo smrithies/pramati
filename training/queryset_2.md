@@ -2,24 +2,27 @@
 
 **1. Manager Name, Count of Employees whose start date is after 2013**
 ```
-- SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
+SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
 FROM employee a, employee b 
 WHERE b.emp_id = a.mgr_id 
 AND a.joining_date>'01-01-2013' 
 GROUP BY b.name 
 ORDER BY b.name;
-
-- SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
+```
+```
+SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
 FROM employee a inner join employee b ON b.emp_id = a.mgr_id 
 WHERE a.joining_date>'01-01-2013' 
 group by b.name 
 order by b.name;
-
-- SELECT COALESCE(b.name,'CEO') AS Mgr_Name,count(a.name) AS Emp_count 
+```
+```
+SELECT COALESCE(b.name,'CEO') AS Mgr_Name,count(a.name) AS Emp_count 
 FROM employee a LEFT join employee b ON b.emp_id = a.mgr_id 
 WHERE a.joining_date>'01-01-1900' 
 GROUP BY b.name 
 ORDER BY b.name;
+```
 
 **2. Manager Name, Min(emp salary) where manager start date is after 2013**
 ```
@@ -31,13 +34,15 @@ GROUP BY b.name;
 ```
 **3. Manager name who atleast has two employees started after 2013**
 ```
-- SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
+SELECT b.name AS Mgr_Name,count(a.name) AS Emp_count 
 FROM employee a, employee b 
 WHERE b.emp_id = a.mgr_id 
 AND a.joining_date>'01-01-2013' 
 GROUP BY b.name 
-HAVING count(a.name) >=2;````
-- SELECT b.name AS Mgr_Name F
+HAVING count(a.name) >=2;
+````
+```
+SELECT b.name AS Mgr_Name F
 ROM employee a, employee b 
 WHERE b.emp_id = a.mgr_id 
 AND a.joining_date>'01-01-2013' 
