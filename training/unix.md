@@ -73,17 +73,11 @@ The Unix operating system is a set of programs that act as a link between the co
     5.  "$rmdir dir_name" | "$rmdir dir1 dir2" -deleting directories
   - Changing file or directory permissions-
 
-    i.  chmod in symbolic mode
-      1.  "\$chmod o+wx filename" -&gt; "+"-Adds the
-        designated permission(s) to a file or directory.
-      2.  "\$chmod u-r|w|x filename" -&gt; "-"-Removes the
-        designated permission(s) from a file or directory.
-      3.  "\$chmod g = rx filename" -&gt; Sets the
-        designated permission(s).
-      4.  \$chmod o+wx,u-x,g = rx testfile - in a single line ii.chmod in
-        absolute permissions The second way to modify permissions with
-        the chmod command is to use a number to specify each set of
-        permissions for the file.
+    - chmod in symbolic mode
+      1.  "\$chmod o+wx filename" -&gt; "+"-Adds the designated permission(s) to a file or directory.
+      2.  "\$chmod u-r|w|x filename" -&gt; "-"-Removes the designated permission(s) from a file or directory.
+      3.  "\$chmod g = rx filename" -&gt; Sets the designated permission(s).
+      4.  \$chmod o+wx,u-x,g = rx testfile - in a single line ii.chmod in absolute permissions The second way to modify permissions with nthe chmod command is to use a number to specify each set of permissions for the file.
 
 
   - Changing Owners(chown) and Groups(chgrp)
@@ -92,29 +86,13 @@ The Unix operating system is a set of programs that act as a link between the co
   - SUID and SGID file permission
     1.  "\$ chmod ug+s dirname"
   - Environment variables
-    1.  "$TEST="Unix Programming" ,$echo \$TEST" - set a variable called
-        TEST and assigned a value and acces using echo. These variables
-        retain their values until we come out of the shell.\
+    1.  "$TEST="Unix Programming" ,$echo \$TEST" - set a variable called TEST and assigned a value and acces using echo.These variables retain their values until we come out of the shell.\
   - Printing Files Text formatters to format text before printing(nroff
     and troff)
     1.  The pr Command - "\$pr option(s) filename(s)" - display only on
         screen, doesnot modify orginal file pr -k - Produces k columns
         of output
 
-        pr -d - Double-spaces the output (not on all pr versions)
-
-        pr -h "header" - Takes the next item as a report header
-
-        pr -t - Eliminates the printing of header and the top/bottom
-        margins
-
-        pr -l PAGE\_LENGTH - Sets the page length to PAGE\_LENGTH (66)
-        lines. The default number of lines of text is 56
-
-        pr -o MARGIN - Offsets each line with MARGIN (zero) spaces
-
-        pr -w PAGE\_WIDTH - Sets the page width to PAGE\_WIDTH (72)
-        characters for multiple text-column output only
         
     2.  lp and lpr command - to print a file
         1.  "lp/lpr filename"
@@ -130,7 +108,7 @@ The Unix operating system is a set of programs that act as a link between the co
         1.  "cancel printer\_name/id" - for lp requests
         2.  "lprm id" - for lpr requests and display which file deleted
 
--   Sending an email
+  - Sending an email
 
     1.  "mail \[-s subject\] \[-c cc-addr\] \[-b bcc-addr\] to-addr"
         eg:- mail -s "text it" smrithies@gmail.com
@@ -195,7 +173,7 @@ The Unix operating system is a set of programs that act as a link between the co
     -   pid repeats as all the numbers get used up but at a time no two
         process will have same pid.
 
-    1.  Starting a process
+    1. Starting a process
 
     -   Mainly two types of processes:- Foreground processes Background
         processes &gt; Foreground processes
@@ -210,44 +188,43 @@ The Unix operating system is a set of programs that act as a link between the co
     -   eg:- "ls &"
 
     2.  Listing running processes
-        -   "ps" | "ps -f"(full)
-        -   -a Shows information about all users
-        -   -x Shows information about processes without terminals
-        -   -u Shows additional information like -f option
-        -   -e Displays extended information
+    -   "ps" | "ps -f"(full)
+    -   -a Shows information about all users
+    -   -x Shows information about processes without terminals
+    -   -u Shows additional information like -f option
+    -   -e Displays extended information
 
     3.  Killing processes
-        -   "ctrl+c"- if foreground
-        -   "kill pid" - pid from "ps" command
-        -   "kill -9 pid" - if regular kill command not possible
+    -   "ctrl+c"- if foreground
+    -   "kill pid" - pid from "ps" command
+    -   "kill -9 pid" - if regular kill command not possible
 
     4.  Parent and child processes
-        -   For every unix process both pid and ppid(parent pid) is
-            assigned(usually shell).
+    -   For every unix process both pid and ppid(parent pid) is assigned(usually shell).
 
     5.  Zombie and orphan processes
-        -   Orphan - when parent process killed before child, sometimes
+    -   Orphan - when parent process killed before child, sometimes
             init process becomes parent.
-        -   Zombie/defunct - some process may have killed,finished
+    -   Zombie/defunct - some process may have killed,finished
             execution, but still having an entry in process table.
 
     6.  Daemon processes
-        -   Daemons are system-related background processes that often
+     -   Daemons are system-related background processes that often
             run with the permissions of root and services requests from
             other processes.
-        -   A daemon has no controlling terminal.
-        -   If a process is lengthy it is better to make it a daemon.
+     -   A daemon has no controlling terminal.
+     -   If a process is lengthy it is better to make it a daemon.
 
     7.  Top command
-        -   The top command is used to quickly show the processes sorted
+     -   The top command is used to quickly show the processes sorted
             by various criteria.
-        -   It is an interactive diagnostic tool that updates frequently
+     -   It is an interactive diagnostic tool that updates frequently
             and shows information about physical and virtual memory, CPU
             usage, load averages, and your busy processes.
-        -   "top"
+     -   "top"
 
     8.  Job id
-        -   Different from pid and is shorter.
-        -   A job can have multiple processes so jobid used instead of
+     -   Different from pid and is shorter.
+     -   A job can have multiple processes so jobid used instead of
             tracking individual processes.
 
