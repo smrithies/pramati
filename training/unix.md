@@ -1,23 +1,20 @@
-=&gt;UNIX
+## UNIX
+```
+The Unix operating system is a set of programs that act as a link between the computer and the user. Users communicate with the kernel through a program known as the shell. The shell is a command line interpreter; it translates commands entered by the user and converts them into a language that is understood by the kernel. Several people can use a Unix computer at the same time; hence Unix is called a multiuser system. A user can also run multiple programs at the same time; hence Unix is a multitasking environment.
+```
+- In Unix, there are three basic types of files
+  - Ordinary Files − An ordinary file is a file on the system that contains data, text, or program instructions.
+  - Directories − Directories store both special and ordinary files. For users familiar with Windows or Mac OS, Unix directories are equivalent to folders.
+  - Special Files − Some special files provide access to hardware such as hard drives, CD-ROM drives, modems, and Ethernet adapters. Other special files are similar to aliases or shortcuts and enable you to access a single file using different names.
 
-> The Unix operating system is a set of programs that act as a link
-> between the computer and the user. Users communicate with the kernel
-> through a program known as the shell. The shell is a command line
-> interpreter; it translates commands entered by the user and converts
-> them into a language that is understood by the kernel. Several people
-> can use a Unix computer at the same time; hence Unix is called a
-> multiuser system. A user can also run multiple programs at the same
-> time; hence Unix is a multitasking environment. In Unix, there are
-> three basic types of files
+- Standard Unix Streams
+  - stdin -file descriptor 0
+  - stdout -file descriptor 1
+  - stderr -file descriptor 2 
+- **Commands:**
+  - Calender- "cal"
 
-    * Ordinary Files − An ordinary file is a file on the system that contains data, text, or program instructions.
-    * Directories − Directories store both special and ordinary files. For users familiar with Windows or Mac OS, Unix directories are equivalent to folders.
-    * Special Files − Some special files provide access to hardware such as hard drives, CD-ROM drives, modems, and Ethernet adapters. Other special files are similar to aliases or shortcuts and enable you to access a single file using different names.
-
-> Standard Unix Streams- \* stdin -file descriptor 0 \* stdout -file
-> descriptor 1 \* stderr -file descriptor 2 Commands: \* Calender- "cal"
-
--   Change password- "\$passwd"
+  - Change password- "\$passwd"
 
 -   Listing directories and files-
     1.  "ls or ls -l"(with date created, rwxr-xr--(rwx-owner,-xr(group
