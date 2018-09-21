@@ -1,4 +1,4 @@
-### SQL queries - SET 1:-
+## SET 1
 
 **1. Employee_Name and Manager_Name**
 ```
