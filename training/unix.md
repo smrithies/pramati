@@ -16,97 +16,86 @@ The Unix operating system is a set of programs that act as a link between the co
 
   - Change password- "\$passwd"
 
--   Listing directories and files-
-    1.  "ls or ls -l"(with date created, rwxr-xr--(rwx-owner,-xr(group
+  - Listing directories and files-
+    1. "ls or ls -l"(with date created, rwxr-xr--(rwx-owner,-xr(group
         file),r--(other users)),starting with d are directories)
-    2.  Metacharacters -'*,?' -"\$ls *.txt | \$ls *.md | \$ls ch*.md"
-    3.  To list hidden files(sh,ksh,csh) -"\$ls -a"
--   Who am I- "whoami"
+    2. Metacharacters -'*,?' -"\$ls *.txt | \$ls *.md | \$ls ch*.md"
+    3. To list hidden files(sh,ksh,csh) -"\$ls -a"
+  - Who am I- "whoami"
 
--   Others logged into same computer- "\$who | \$users | \$w"
+  - Others logged into same computer- "\$who | \$users | \$w"
 
--   Logout- "logout"
+  - Logout- "logout"
 
--   System shutdown-
+  - System shutdown-
 
-    1.  "halt" -Brings the system down immediately
-    2.  "init 0" -Powers off the system using predefined scripts to
-        synchronize and clean up the system prior to shutting down
-    3.  "init 6" -Reboots the system by shutting it down completely and
-        then restarting it
-    4.  "poweroff" -Shuts down the system by powering off
-    5.  "reboot" -Reboots the system
-    6.  "shutdown" -Shuts down the system
--   Creating files-
-    1.  "vi filename" -created file
-    2.  "i" -to enter into edit mode
-    3.  "esc"key -to escape from edit mode
-    4.  "shift+zz" -to entirely come out of file
--   Moving inside files-(out of esc)
-    1.  "l" key -to move to the right side.
-    2.  "h" key -to move to the left side.
-    3.  "k" key to move upside in the file.
-    4.  "j" key to move downside in the file
--   Display the content-
-    1.  cat filename
-    2.  cat -b filename -listed content with numbers
--   Counting words in a file-
-    1.  "\$wc filename" -display lines,words and characters in file
-    2.  "\$wc file1 file2" -multiple files
--   Copying files-
+    1. "halt" -Brings the system down immediately
+    2. "init 0" -Powers off the system using predefined scripts t0 synchronize and clean up the system prior to shutting down
+    3. "init 6" -Reboots the system by shutting it down completely and then restarting it
+    4. "poweroff" -Shuts down the system by powering off
+    5. "reboot" -Reboots the system
+    6. "shutdown" -Shuts down the system
+  - Creating files-
+    1. "vi filename" -created file
+    2. "i" -to enter into edit mode
+    3. "esc"key -to escape from edit mode
+    4. "shift+zz" -to entirely come out of file
+  - Moving inside files-(out of esc)
+    1. "l" key -to move to the right side.
+    2. "h" key -to move to the left side.
+    3. "k" key to move upside in the file.
+    4. "j" key to move downside in the file
+  - Display the content-
+    1. cat filename
+    2. cat -b filename -listed content with numbers
+  - Counting words in a file-
+    1. "\$wc filename" -display lines,words and characters in file
+    2. "\$wc file1 file2" -multiple files
+  - Copying files-
     1.  "\$cp source\_file destinatn\_file"
     2.  "\$cp" filename copyfile -already existing file with same name
--   Rename file-
-    1.  "\$mv old\_name new\_name"
--   Deleting files-
+  - Rename file-
+    1. "\$mv old\_name new\_name"
+  - Deleting files-
     1.  "$rm filename" | "$rm -i filename"
     2.  "\$rm file1 file2"
--   Home Directory-
+  - Home Directory-
     1.  "\$cd \~" -return to home directory
     2.  "\$cd \~username" -to other user
     3.  "\$cd -" -to last directory
--   "\$pwd" -Current working directory
--   "\$ls dir\_name" -listing files inside directory
--   Creating and deleting directories-
+  - "\$pwd" -Current working directory
+  - "\$ls dir\_name" -listing files inside directory
+  - Creating and deleting directories-
     1.  "\$mkdir dir\_name"
     2.  "\$mkdir dir1 dir2"
     3.  "\$mkdir /temp/dir\_name"
     4.  "\$mkdir -p /temp/dir\_name" -if temp not existing and create it
     5.  "$rmdir dir_name" | "$rmdir dir1 dir2" -deleting directories
--   Changing file or directory permissions-
+  - Changing file or directory permissions-
 
-i.  chmod in symbolic mode
-    1.  "\$chmod o+wx filename" -&gt; "+"-Adds the
+    i.  chmod in symbolic mode
+      1.  "\$chmod o+wx filename" -&gt; "+"-Adds the
         designated permission(s) to a file or directory.
-    2.  "\$chmod u-r|w|x filename" -&gt; "-"-Removes the
+      2.  "\$chmod u-r|w|x filename" -&gt; "-"-Removes the
         designated permission(s) from a file or directory.
-    3.  "\$chmod g = rx filename" -&gt; Sets the
+      3.  "\$chmod g = rx filename" -&gt; Sets the
         designated permission(s).
-    4.  \$chmod o+wx,u-x,g = rx testfile - in a single line ii.chmod in
+      4.  \$chmod o+wx,u-x,g = rx testfile - in a single line ii.chmod in
         absolute permissions The second way to modify permissions with
         the chmod command is to use a number to specify each set of
         permissions for the file.
 
-    Number Octal Permission Representation Ref 0 No permission --- 1
-    Execute permission --x 2 Write permission -w- 3 Execute and write
-    permission: 1 (execute) + 2 (write) = 3 -wx 4 Read permission r-- 5
-    Read and execute permission: 4 (read) + 1 (execute) = 5 r-x 6 Read
-    and write permission: 4 (read) + 2 (write) = 6 rw- 7 All
-    permissions: 4 (read) + 2 (write) + 1 (execute) = 7 rwx
 
-    eg:-"\$chmod 755 testfile" \$ls -l testfile -rwxr-xr-x 1 amrood
-    users 1024 Nov 2 00:10 testfile
-
--   Changing Owners(chown) and Groups(chgrp)
+  - Changing Owners(chown) and Groups(chgrp)
     1.  "\$chown username testfile"
     2.  "\$chgrp group name testfile"
--   SUID and SGID file permission
+  - SUID and SGID file permission
     1.  "\$ chmod ug+s dirname"
--   Environment variables
+  - Environment variables
     1.  "$TEST="Unix Programming" ,$echo \$TEST" - set a variable called
         TEST and assigned a value and acces using echo. These variables
         retain their values until we come out of the shell.\
--   Printing Files Text formatters to format text before printing(nroff
+  - Printing Files Text formatters to format text before printing(nroff
     and troff)
     1.  The pr Command - "\$pr option(s) filename(s)" - display only on
         screen, doesnot modify orginal file pr -k - Produces k columns
@@ -126,6 +115,7 @@ i.  chmod in symbolic mode
 
         pr -w PAGE\_WIDTH - Sets the page width to PAGE\_WIDTH (72)
         characters for multiple text-column output only
+        
     2.  lp and lpr command - to print a file
         1.  "lp/lpr filename"
         2.  "lp -nNUM filename" - NUM no of copies
@@ -141,23 +131,24 @@ i.  chmod in symbolic mode
         2.  "lprm id" - for lpr requests and display which file deleted
 
 -   Sending an email
+
     1.  "mail \[-s subject\] \[-c cc-addr\] \[-b bcc-addr\] to-addr"
         eg:- mail -s "text it" smrithies@gmail.com
     2.  "mail -s "subject" "smrithies@gmail.com &lt; unix.txt" - sending
         an entire file(&lt; - redirect operator)
     3.  "mail" - to check incoming mail
--   Pipes and filters &gt; Pipes
-    -   Pipes just connect two commands together by which two programs
+  - Pipes and filters &gt; Pipes
+    - Pipes just connect two commands together by which two programs
         are connected together.
-    -   Output of one program become input for another.
-    -   Usually done by putting a vertical bar. &gt; Filters
-    -   Filters read data from standard input and write to
+    - Output of one program become input for another.
+    - Usually done by putting a vertical bar. &gt; Filters
+    - Filters read data from standard input and write to
         standard output.
-    -   Standard input is the source of data for a program, and by
+    - Standard input is the source of data for a program, and by
         default it is text typed in at the keyboard. However, it can be
         redirected to come from a file or from the output of
         another program.
-    -   Standard output is the destination of output from a program, and
+    - Standard output is the destination of output from a program, and
         by default it is the display screen.
 
     1.  Grep command
@@ -198,7 +189,7 @@ i.  chmod in symbolic mode
     -   eg:- "ls -l | grep "pattern" file\_name | sort | more
     -   It will stop showing text when screen filled with text and then
         to see further type any command
--   Processes Management
+     Processes Management
     -   When we try to run a command a new process is getting started
         which is tracked using a unique id- process id(pid).
     -   pid repeats as all the numbers get used up but at a time no two
