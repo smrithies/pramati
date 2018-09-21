@@ -115,62 +115,55 @@ The Unix operating system is a set of programs that act as a link between the co
     2.  "mail -s "subject" "smrithies@gmail.com &lt; unix.txt" - sending
         an entire file(&lt; - redirect operator)
     3.  "mail" - to check incoming mail
-  - Pipes and filters &gt; Pipes
-    - Pipes just connect two commands together by which two programs
+  - Pipes and filters
+    - Pipes
+      - Pipes just connect two commands together by which two programs
         are connected together.
-    - Output of one program become input for another.
-    - Usually done by putting a vertical bar. &gt; Filters
-    - Filters read data from standard input and write to
+      - Output of one program become input for another.
+      - Usually done by putting a vertical bar. &gt; Filters
+      - Filters read data from standard input and write to
         standard output.
-    - Standard input is the source of data for a program, and by
+      - Standard input is the source of data for a program, and by
         default it is text typed in at the keyboard. However, it can be
         redirected to come from a file or from the output of
         another program.
-    - Standard output is the destination of output from a program, and
+      - Standard output is the destination of output from a program, and
         by default it is the display screen.
 
-    1.  Grep command
+        1. Grep command
 
-    -   The grep filter searches a file for a particular pattern of
+           - The grep filter searches a file for a particular pattern of
         characters, and displays all lines that contain that pattern.
-    -   The pattern that is searched in the file is referred to as the
+           - The pattern that is searched in the file is referred to as the
         regular expression( word/characters).
-    -   grep stands for globally search for regular expression and
+           - grep stands for globally search for regular expression and
         print out.
-    -   "grep pattern file\_name"
-    -   eg:- "ls -l | grep "pattern" file\_name"
-    -   -v -&gt; Prints all lines that do not match pattern.
-    -   -n -&gt; Prints the matched line and its line number.
-    -   -l -&gt; Prints only the names of files with matching lines
-        (letter "l")
-    -   -c -&gt; Prints only the count of matching lines.
-    -   -i -&gt; Matches either upper or lowercase.
-    -   eg:- "ls -l | grep "unix.\*is" - unix and any no of characters
-        and ending with is
+           - "grep pattern file\_name"
+           -   eg:- "ls -l | grep "pattern" file\_name"
+    
 
-    2.  Sort command
+       2. Sort command
 
-    -   Sorts the lines in a file either alphabetically or numerically.
-    -   "sort file\_name"
-    -   -n -&gt; Sorts numerically, ignores blanks and tabs.
-    -   -r -&gt; Reverses the order of sort.
-    -   -f -&gt; Sorts upper and lowercase together.
-    -   +x -&gt; Ignores first x fields when sorting.
+          -   Sorts the lines in a file either alphabetically or numerically.
+          -   "sort file\_name"
+          -   -n Sorts numerically, ignores blanks and tabs.
+          -   -r  Reverses the order of sort.
+          -   -f Sorts upper and lowercase together.
+          -   +x Ignores first x fields when sorting.
 
-    3.  Pg and more command
+       3.  Pg and more command
 
-    -   pg and more similar to view a file one page at a time
-    -   eg:- "pg file\_name" - then type any key to navigate to next
-        page
-    -   More is a command to view(do not modify) the contents of a text
+          -   pg and more similar to view a file one page at a time
+          -   eg:- "pg file\_name" - then type any key to navigate to next page
+          -   More is a command to view(do not modify) the contents of a text
         file one screen at a time.
-    -   eg:- "ls -l | grep "pattern" file\_name | sort | more
-    -   It will stop showing text when screen filled with text and then
+          -   eg:- "ls -l | grep "pattern" file\_name | sort | more
+          -   It will stop showing text when screen filled with text and then
         to see further type any command
-     Processes Management
-    -   When we try to run a command a new process is getting started
+- Processes Management
+  - When we try to run a command a new process is getting started
         which is tracked using a unique id- process id(pid).
-    -   pid repeats as all the numbers get used up but at a time no two
+  - pid repeats as all the numbers get used up but at a time no two
         process will have same pid.
 
     1. Starting a process
