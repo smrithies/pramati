@@ -28,10 +28,8 @@ ornate, playful, or colored fonts; these simply distract the recipient
 from your actual message. Avoid overusing bold and italics as well,
 which make an email look cluttered. Do not write in all capital letters
 either.
-```
-The cardinal rule: Your emails should be easy for other people
+  - **The cardinal rule:** Your emails should be easy for other people
 to read. 
-```
   - Generally, it is best to use 10- or 12- point type and an
 easy-to-read font such as Arial, Calibri, or Times New Roman. Black
 color is the best choice.
