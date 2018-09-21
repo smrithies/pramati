@@ -11,9 +11,9 @@ sure to keep in mind.
 - **Include a clear, direct, short subject line** so that recipient will
 be able to understand content of email faster and open it.
 - **Creating message:**
-- Begin with a greeting and for that use proper
+  - Begin with a greeting and for that use proper
 professional salutation(use either Hi or Hello).
-- First make a clear
+  - First make a clear
 picture of purpose of email in beginning of the message.
 - Now move on to main text of the email and make sure that sentences are short and
 clear. 
