@@ -1,7 +1,7 @@
+import psycopg2
 import re
 import os
 import ntpath
-import psycopg2
 path=input("Enter path\n")
 
 filename=ntpath.basename(path)
@@ -21,7 +21,7 @@ print "Name ",name
 print"Email ",mail[0]
 print "Phone ",phone[0]
 
-conn = psycopg2.connect(host="localhost",database="resume",user="user123",password="user1")
+conn = psycopg2.connect(host="localhost",database="resume1",user="user1",password="password");
 cur = conn.cursor()
 insert="INSERT INTO resume_collect(filename,email,phone) VALUES (%s,%s,%s);"
 cur.execute(insert,data);

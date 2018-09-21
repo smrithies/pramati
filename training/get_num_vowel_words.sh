@@ -1,6 +1,7 @@
 #Program to print the number of words with vowels in a resume
 
 #!/bin/sh
+pandoc resume.docx -o resume1.txt
 filename="resume1.txt"
 #Read word by word from a file
 word=$(cat $filename)

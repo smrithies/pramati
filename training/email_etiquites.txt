@@ -22,10 +22,12 @@ subject:Updated google sheet.
 
 Hi Aneesh,
 
- I apologise for sending a mail which was not formal. From this email onwards I will follow strict guidelines for a professional email.
+I apologise for sending a mail which was not formal. 
 
-I have updated google sheet accordingly.
-Please check it once.
+From this email onwards I will follow strict guidelines for a professional email.
+
+I have updated google sheet accordingly and please find below .
+
 Sheet Link - https://github.com/smrithies/introduction/blob/master/githubbasics
                     
 
