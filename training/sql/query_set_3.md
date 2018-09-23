@@ -3,15 +3,6 @@
 **1. SQL to find the missing ids from dept**
 
 ```
-SELECT  dept_id +1
-FROM dept
-WHERE dept_id + 1 NOT IN 
-   (SELECT DISTINCT dept_id 
-    FROM dept)
-AND dept_id + 1 < (SELECT MAX(dept_id) from dept) ;
-```
-
-```
 SELECT generate_series(
                   (SELECT MIN(dept_id) 
                    FROM dept),
@@ -33,17 +24,6 @@ LEFT JOIN dept
 ON dept.dept_id = sn
 WHERE dept_id IS NULL;
 
-```
-```
-WITH RECURSIVE series AS (
-	SELECT 1 AS rn
-	UNION ALL
-		SELECT rn + 1 AS rn
-		FROM series
-		WHERE rn < 10
-) 
-SELECT *
-FROM series;
 ```
 
 **2. Manager Name, Reportee who joined first (Reportee Name - doj), Reportee who draws less sal (Reportee Name - salary) - window function**
