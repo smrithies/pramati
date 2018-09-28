@@ -8,10 +8,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- <script>
-	function insert1(){
-		
-</script>	
+<script>
+var i=0;
+	$(document).ready(function(){
+ 	$("#hello").click(function(){
+	var a=$("<td></td>").text($("#fn").val());
+	var b=$("<td></td>").text($("#ln").val());
+	var c=$("<td></td>").text($("#em").val());
+	var d=$("<td></td>").text($("#dob").val());
+	var e=$("<td></td>").text($("#ph").val());
+	$($("table tr").eq(i)).after(e).after(d).after(c).after(b).after(a);
+	i=i+1;
+	 });
+	});
+</script>
+
 </head>
 <body>
 <div class="container">
@@ -19,7 +30,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-7">
-  <form action="/my_page.html">
+  <form >
 	<h2>Application Form</h2><br>
 	<div class="form-group">
 		<label for="fname">First Name:</label>
@@ -58,7 +69,9 @@
 		<th>Date of Birth</th>
 		<th>Phone no</th>
 	<thead>
-	<table>
+	<tbody>
+	</tbody>
+	</table>
 
 
 </div>
