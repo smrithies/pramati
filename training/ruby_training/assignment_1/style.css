@@ -31,7 +31,7 @@
   margin-right: 10px;
   margin-left: 10px;
 }
-.readmore-align {
+.readmore {
   float: right;
 }
 .content {
@@ -39,10 +39,7 @@
   margin-right: 13px;
   margin-left: 13px;
 }
-.header-font {
-  font-size: 23px;
-  font-family:arial;
-  font-weight: bold;
+h2{
   color: green;
 }
 .content-font {
