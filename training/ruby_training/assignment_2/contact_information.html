@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>javascript.html</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <script type="text/javascript" src="js_file.js"></script>
-		<style>
-			span {
-				padding-left:1em;
-			}
-		</style>  
-</head>
-  <body>
-    <div class="container">
+   <head>
+      <title>javascript.html</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+      <script type="text/javascript" src="js_file.js"></script>
+      <style>
+         span {
+         padding-left:1em;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
       <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8 well">
-					<div class="panel panel-primary">
-      <div class="panel-heading text-center">Employee Contact Details</div>
-			</div>
-          <form id="fillForm" action="Login" method="post" class="form-signin">
-            <br>
-            <div class="form-group form-inline">
-              <label class=" col-md-3" for="fname">First Name:</label>
-              <input type="text" class="form-control" id="fn" size=35 name="fname" placeholder="first name" onkeyup="javascript:capitalize(this.id, this.value)" onBlur="fname()" required="" autocomplete="off" onchange="fNameAlert()"><span id="error0"></span>
+         <div class="col-md-2">
+         </div>
+         <div class="col-md-8 well">
+            <div class="panel panel-primary">
+               <div class="panel-heading text-center">Employee Contact Details</div>
             </div>
-            <div class="form-group form-inline">
-              <label class=" col-md-3" for="fname">Last Name:</label>
-              <input type="text" class="form-control" id="ln" size=35 name="lname" placeholder="last name" onkeyup="javascript:capitalize(this.id, this.value)" onBlur="lname()" required="" autocomplete="off" onchange="lNameAlert()"><span id="error1"></span>
+            <form id="fillForm" action="Login" method="post" class="form-signin">
+               <br>
+               <div class="form-group form-inline">
+                  <label class=" col-md-3" for="fname">First Name:</label>
+                  <input type="text" class="form-control" id="fn" size=35 name="fname" placeholder="first name" onkeyup="javascript:capitalize(this.id, this.value)" onBlur="fname()" required="" autocomplete="off" onchange="fNameAlert()"><span id="error0"></span>
+               </div>
+               <div class="form-group form-inline">
+                  <label class=" col-md-3" for="fname">Last Name:</label>
+                  <input type="text" class="form-control" id="ln" size=35 name="lname" placeholder="last name" onkeyup="javascript:capitalize(this.id, this.value)" onBlur="lname()" required="" autocomplete="off" onchange="lNameAlert()"><span id="error1"></span>
+               </div>
+               <div class="form-group form-inline">
+                  <label class=" col-md-3" for="email">Email:</label>
+                  <input type="email" class="form-control" id="em" size=35 name="email" placeholder="Enter email" required="" autocomplete="off" onchange="emailAlert()"><span id="error2"></span><span id="error5"></span>
+               </div>
+               <div class="form-group form-inline">
+                  <label  class=" col-md-3"for="dob">Date of Birth:</label>
+                  <input type="text" class="form-control" id="dob" size=35 name="dob" placeholder="MM/DD/YYYY" required="" autocomplete="off" onchange="dobAlert()"><span id="error3"></span><span id="error6"></span>	
+               </div>
+               <div class="form-group form-inline">
+                  <label  class=" col-md-3" for="phone no">Phone no:</label>
+                  <input type="text" class="form-control" id="ph" size=35 name="phoneno" placeholder="phone no" required="" autocomplete="off" onchange="phoneAlert()"><span id="error4"></span><span id="error7"></span>
+               </div>
+               <div align="center">
+                  <button type="button" class="btn btn-primary" onclick="return check(this)">submit</button>
+               </div>
+               <br>
+            </form>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-1">
+         </div>
+         <div class="col-md-10 well">
+            <div class="panel panel-primary">
+               <div class="panel-heading text-center">Employee Contact Details Table</div>
             </div>
-            <div class="form-group form-inline">
-              <label class=" col-md-3" for="email">Email:</label>
-              <input type="email" class="form-control" id="em" size=35 name="email" placeholder="Enter email" required="" autocomplete="off" onchange="emailAlert()"><span id="error2"></span><span id="error5"></span>
-            </div>
-            <div class="form-group form-inline">
-              <label  class=" col-md-3"for="dob">Date of Birth:</label>
-              <input type="text" class="form-control" id="dob" size=35 name="dob" placeholder="MM/DD/YYYY" required="" autocomplete="off" onchange="dobAlert()"><span id="error3"></span><span id="error6"></span>	
-            </div>
-            <div class="form-group form-inline">
-              <label  class=" col-md-3" for="phone no">Phone no:</label>
-              <input type="text" class="form-control" id="ph" size=35 name="phoneno" placeholder="phone no" required="" autocomplete="off" onchange="phoneAlert()"><span id="error4"></span><span id="error7"></span>
-            </div>
-            <div align="center">
-              <button type="button" class="btn btn-primary" onclick="return check(this)">submit</button>
-            </div>
-            <br>
-          </form>
-        </div>
-    </div>
-		<div class="row">
-			<div class="col-md-1">
-			</div>
-    	<div class="col-md-10 well">
-				<div class="panel panel-primary">
-      	<div class="panel-heading text-center">Employee Contact Details Table</div>
-				</div>
-      	<table id="contact" class="table table-bordered">
-					<thead class="table-dark text-center">
-          	<th>First Name</th>
-          	<th>Last Name</th>
-          	<th>Email</th>
-          	<th>Date of Birth</th>
-          	<th>Phone no</th>
-        	</thead>
-        	<tbody>
-        	</tbody>
-      	</table>
-    	</div>
-			<div class="col-md-1">
-			</div>
-		</div>
-  </body>
+            <table id="contact" class="table table-bordered">
+               <thead class="table-dark text-center">
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Date of Birth</th>
+                  <th>Phone no</th>
+               </thead>
+               <tbody>
+               </tbody>
+            </table>
+         </div>
+         <div class="col-md-1">
+         </div>
+      </div>
+   </body>
 </html>
