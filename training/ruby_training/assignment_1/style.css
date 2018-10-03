@@ -1,81 +1,75 @@
-.logo{
-  padding-left : 10px;
-  width : 100%;
+.top-spacing {
+  padding-top: 1em;
+  height: 5em;
 }
 
-.icon{
-	float : right;
-	padding-right : 10px;
+.header {
+  padding-left: 10px;
+  width: 100%;
 }
 
-.overflow{
-	padding-top : 1em;
-	height : 5em;
+.icon-space {
+  float: right;
+  padding-right: 10px;
 }
 
-.icon-link{  
-	padding : 0;  
-	margin :  0;
-	padding-right :  30px;
-	float : right;
-	color : black;
+.icon-link {
+  padding: 0;
+  margin: 0;
+  padding-right: 30px;
+  float: right;
+  color: black;
 }
 
-.home-link{   
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
-}
-
-.about-link{
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
-}
-
-.idea-link{   
-	padding-right : 25px;   
-	padding-left : 20px;
-	color : black;
-	text-decoration : none;
-}
-.banner-image{
-	width:100%;
-	height:auto;
-}
-.image-border{
-	padding-top : 8px;
-	padding-bottom : 6px;
-	border-width : 1px 0 1px 0;
-	border-style : dashed;
-	margin : 1px;
-	border-color : lightgray; 
-}
-.heading{
-	padding-left : 1px;
-	color : green;
-}
-.main-content{
-	padding-left : 10px;
-	padding-right : 10px;
-	padding-bottom : 10px;
-}
-
-.readmore{
-	float : right;
-	padding-top : 10px;
-	padding-right : 10px;
-}
-.readmore-link{
-	color: black;
-  background-color: transparent;
+.home-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
   text-decoration: none;
 }
-.content {
+
+.about-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
+}
+
+.idea-link {
+  padding-right: 25px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.banner-section {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  border-width: 1px 0 1px 0;
+  border-style: dashed;
+  margin: 1px;
+  border-color: lightgray;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  padding-left: 1px;
+  color: green;
+}
+
+.main-content-section {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.subsection {
   display: table;
   top: 20px;
   height: 200px;
@@ -84,16 +78,18 @@
   margin-bottom: 5px;
   margin-left: 13px;
 }
-.content-left {
+
+.subsection-left {
   float: left;
   width: 30%;
   top: -115px;
   padding-left: 2px;
   padding-right: 15px;
-  border-right: 1.7px dashed lightgray;
+  border-right: 1.4px dashed lightgray;
   margin-top: 6px;
 }
-.content-middle {
+
+.subsection-middle {
   display: inline-block;
   width: 30%;
   top: -115px;
@@ -102,7 +98,8 @@
   padding-left: 3px;
   padding-right: 1px;
 }
-.content-right {
+
+.subsection-right {
   float: right;
   width: 32%;
   text-align: justify;
@@ -110,48 +107,57 @@
   padding-right: 10px;
   margin-top: 4px;
   margin-left: 23px;
-  margin-right:-10px;
+  margin-right: -10px;
   border: 7px solid #99994d;
   background-color: #e5e5cc;
 }
-.list_style{
-	width : 70%;
-	text-align : center;
-	padding-bottom : 4px;
-	list-style-image : url('bullet.png');
-}
-.home-link{   
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+
+.read-more {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
-.about-link{
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+.read-more-link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
 }
 
-.idea-link{   
-	padding-right : 25px;   
-	padding-left : 20px;
-	color : black;
-	text-decoration : none;
+.list-style {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 4px;
+  list-style-image: url('bullet.png');
 }
 
-.align-right{
-	float : right;
+.home-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
 }
+
+.about-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
+}
+
+.idea-link {
+  padding-right: 25px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.align-right {
+  float: right;
+}
+
 .dashed-border {
   border: 1px dashed lightgray;
-  margin-left: -10px;
-  margin-right: -10px;
 }
-<<<<<<< HEAD
-=======
- 
->>>>>>> 6dfc2c7b7548cfdbbf426d18e199916ed1abb0e4
