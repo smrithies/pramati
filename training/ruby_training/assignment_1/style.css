@@ -1,66 +1,79 @@
-.inspace {
-  height: 100px;
-  margin-right: 10px;
-  margin-left: 10px;
+.logo{
+  padding-left : 10px;
+  width : 100%;
 }
-.logo-left {
-  position: relative;
-  top: 20px;
-  left: 30px;
+
+.icon{
+	float : right;
+	padding-right : 10px;
 }
-.icon-right {
-  position: relative;
-  top: -50px;
-  right: -1050px;
+
+.overflow{
+	padding-top : 1em;
+	height : 5em;
 }
-.dashed-border {
-  border: 1px dashed lightgray;
-  margin-left: -10px;
-  margin-right: -10px;
+
+.icon-link{  
+	padding : 0;  
+	margin :  0;
+	padding-right :  30px;
+	float : right;
+	color : black;
 }
-.icontext {
-  top: 0px;
+
+.home-link{   
+	padding-right : 30px;   
+	padding-left : 20px;   
+	border-right : 1px solid black;
+	color : black;
+	text-decoration : none;
 }
-.banner-image {
-  width: 100%;
+
+.about-link{
+	padding-right : 30px;   
+	padding-left : 20px;   
+	border-right : 1px solid black;
+	color : black;
+	text-decoration : none;
 }
-.banner {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+
+.idea-link{   
+	padding-right : 25px;   
+	padding-left : 20px;
+	color : black;
+	text-decoration : none;
 }
-.readmore {
-  float: right;
+.banner-image{
+	width:100%;
+	height:auto;
 }
-.content {
-  position: relative;
-  margin-right: 13px;
-  margin-left: 13px;
+.image-border{
+	padding-top : 8px;
+	padding-bottom : 6px;
+	border-width : 1px 0 1px 0;
+	border-style : dashed;
+	margin : 1px;
+	border-color : lightgray; 
 }
-h2{
-  color: green;
+.heading{
+	padding-left : 1px;
+	color : green;
 }
-.content-font {
-  font-family:arial;
-  font-size: 15px;
+.main-content{
+	padding-left : 10px;
+	padding-right : 10px;
+	padding-bottom : 10px;
 }
-.space-home {
-  adding-left: 8px;
-  padding-right: 21px;
+
+.readmore{
+	float : right;
+	padding-top : 10px;
+	padding-right : 10px;
 }
-.space-about {
-  padding-left: 5px;
-  padding-right: 21px;
-}
-.space-idea {
-  padding-left: 9px;
-  padding-right: 21px;
-}
-.space {
-  margin-top: -2px;
-  margin-left: -15px;
+.readmore-link{
+	color: black;
+  background-color: transparent;
+  text-decoration: none;
 }
 .content {
   display: table;
@@ -75,10 +88,10 @@ h2{
   float: left;
   width: 30%;
   top: -115px;
-  padding-left: 6px;
+  padding-left: 2px;
   padding-right: 15px;
   border-right: 1.7px dashed lightgray;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .content-middle {
   display: inline-block;
@@ -95,33 +108,47 @@ h2{
   text-align: justify;
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 12px;
+  margin-top: 4px;
   margin-left: 23px;
   margin-right:-10px;
   border: 7px solid #99994d;
   background-color: #e5e5cc;
 }
-.footer {
-  height: 50px;
-  top: 10px;
-  margin-top: 10px;
+.list_style{
+	width : 70%;
+	text-align : center;
+	padding-bottom : 4px;
+	list-style-image : url('bullet.png');
 }
-.footer-right {
-  float: right;
-}
-.list {
-  list-style-image: url("bullet.png");
-  margin-left: 50px;
-  padding-bottom: 15px;
-}
-.anchor-link {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-body{
-  margin:0px;
-  padding:0px;
+.home-link{   
+	padding-right : 30px;   
+	padding-left : 20px;   
+	border-right : 1px solid black;
+	color : black;
+	text-decoration : none;
 }
 
+.about-link{
+	padding-right : 30px;   
+	padding-left : 20px;   
+	border-right : 1px solid black;
+	color : black;
+	text-decoration : none;
+}
+
+.idea-link{   
+	padding-right : 25px;   
+	padding-left : 20px;
+	color : black;
+	text-decoration : none;
+}
+
+.align-right{
+	float : right;
+}
+.dashed-border {
+  border: 1px dashed lightgray;
+  margin-left: -10px;
+  margin-right: -10px;
+}
  
