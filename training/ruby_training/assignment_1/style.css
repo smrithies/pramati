@@ -1,16 +1,17 @@
-.logo{
+
+.top-spacing{
+	padding-top : 1em;
+	height : 5em;
+}
+
+.header{
   padding-left : 10px;
   width : 100%;
 }
 
-.icon{
+.icon-space{
 	float : right;
 	padding-right : 10px;
-}
-
-.overflow{
-	padding-top : 1em;
-	height : 5em;
 }
 
 .icon-link{  
@@ -43,11 +44,8 @@
 	color : black;
 	text-decoration : none;
 }
-.banner-image{
-	width:100%;
-	height:auto;
-}
-.image-border{
+
+.banner-section{
 	padding-top : 8px;
 	padding-bottom : 6px;
 	border-width : 1px 0 1px 0;
@@ -55,27 +53,24 @@
 	margin : 1px;
 	border-color : lightgray; 
 }
+
+.banner-image{
+	width:100%;
+	height:auto;
+}
+
 .heading{
 	padding-left : 1px;
 	color : green;
 }
-.main-content{
+
+.main-content-section{
 	padding-left : 10px;
 	padding-right : 10px;
 	padding-bottom : 10px;
 }
 
-.readmore{
-	float : right;
-	padding-top : 10px;
-	padding-right : 10px;
-}
-.readmore-link{
-	color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-.content {
+.subsection {
   display: table;
   top: 20px;
   height: 200px;
@@ -84,16 +79,18 @@
   margin-bottom: 5px;
   margin-left: 13px;
 }
-.content-left {
+
+.subsection-left {
   float: left;
   width: 30%;
   top: -115px;
   padding-left: 2px;
   padding-right: 15px;
-  border-right: 1.7px dashed lightgray;
+  border-right: 1.4px dashed lightgray;
   margin-top: 6px;
 }
-.content-middle {
+
+.subsection-middle {
   display: inline-block;
   width: 30%;
   top: -115px;
@@ -102,7 +99,8 @@
   padding-left: 3px;
   padding-right: 1px;
 }
-.content-right {
+
+.subsection-right {
   float: right;
   width: 32%;
   text-align: justify;
@@ -114,7 +112,19 @@
   border: 7px solid #99994d;
   background-color: #e5e5cc;
 }
-.list_style{
+
+.read-more{
+	float : right;
+	padding-top : 10px;
+	padding-right : 10px;
+}
+.read-more-link{
+	color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.list-style{
 	width : 70%;
 	text-align : center;
 	padding-bottom : 4px;
@@ -142,16 +152,10 @@
 	color : black;
 	text-decoration : none;
 }
-
 .align-right{
 	float : right;
 }
+
 .dashed-border {
   border: 1px dashed lightgray;
-  margin-left: -10px;
-  margin-right: -10px;
 }
-<<<<<<< HEAD
-=======
- 
->>>>>>> 6dfc2c7b7548cfdbbf426d18e199916ed1abb0e4
