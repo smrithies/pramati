@@ -1,73 +1,72 @@
-
-.top-spacing{
-	padding-top : 1em;
-	height : 5em;
+.top-spacing {
+  padding-top: 1em;
+  height: 5em;
 }
 
-.header{
-  padding-left : 10px;
-  width : 100%;
+.header {
+  padding-left: 10px;
+  width: 100%;
 }
 
-.icon-space{
-	float : right;
-	padding-right : 10px;
+.icon-space {
+  float: right;
+  padding-right: 10px;
 }
 
-.icon-link{  
-	padding : 0;  
-	margin :  0;
-	padding-right :  30px;
-	float : right;
-	color : black;
+.icon-link {
+  padding: 0;
+  margin: 0;
+  padding-right: 30px;
+  float: right;
+  color: black;
 }
 
-.home-link{   
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+.home-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
 }
 
-.about-link{
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+.about-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
 }
 
-.idea-link{   
-	padding-right : 25px;   
-	padding-left : 20px;
-	color : black;
-	text-decoration : none;
+.idea-link {
+  padding-right: 25px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: none;
 }
 
-.banner-section{
-	padding-top : 8px;
-	padding-bottom : 6px;
-	border-width : 1px 0 1px 0;
-	border-style : dashed;
-	margin : 1px;
-	border-color : lightgray; 
+.banner-section {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  border-width: 1px 0 1px 0;
+  border-style: dashed;
+  margin: 1px;
+  border-color: lightgray;
 }
 
-.banner-image{
-	width:100%;
-	height:auto;
+.banner-image {
+  width: 100%;
+  height: auto;
 }
 
-.heading{
-	padding-left : 1px;
-	color : green;
+.heading {
+  padding-left: 1px;
+  color: green;
 }
 
-.main-content-section{
-	padding-left : 10px;
-	padding-right : 10px;
-	padding-bottom : 10px;
+.main-content-section {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .subsection {
@@ -86,7 +85,7 @@
   top: -115px;
   padding-left: 2px;
   padding-right: 15px;
-  border-right: 1.4px dashed lightgray;
+  border-right: 1px dashed lightgray;
   margin-top: 6px;
 }
 
@@ -108,52 +107,55 @@
   padding-right: 10px;
   margin-top: 4px;
   margin-left: 23px;
-  margin-right:-10px;
+  margin-right: -10px;
   border: 7px solid #99994d;
   background-color: #e5e5cc;
 }
 
-.read-more{
-	float : right;
-	padding-top : 10px;
-	padding-right : 10px;
+.read-more {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
 }
-.read-more-link{
-	color: black;
+
+.read-more-link {
+  color: black;
   background-color: transparent;
   text-decoration: none;
 }
 
-.list-style{
-	width : 70%;
-	text-align : center;
-	padding-bottom : 4px;
-	list-style-image : url('bullet.png');
-}
-.home-link{   
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+.list-style {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 4px;
+  list-style-image: url('bullet.png');
 }
 
-.about-link{
-	padding-right : 30px;   
-	padding-left : 20px;   
-	border-right : 1px solid black;
-	color : black;
-	text-decoration : none;
+.home-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
 }
 
-.idea-link{   
-	padding-right : 25px;   
-	padding-left : 20px;
-	color : black;
-	text-decoration : none;
+.about-link {
+  padding-right: 30px;
+  padding-left: 20px;
+  border-right: 1px solid black;
+  color: black;
+  text-decoration: none;
 }
-.align-right{
-	float : right;
+
+.idea-link {
+  padding-right: 25px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.align-right {
+  float: right;
 }
 
 .dashed-border {
