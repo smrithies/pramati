@@ -1,8 +1,5 @@
-span{
-				padding-left:1em;
-			}
-
 .validation-error {
+	padding-left:1em;
 	display : none;
 	color : red;
 }
