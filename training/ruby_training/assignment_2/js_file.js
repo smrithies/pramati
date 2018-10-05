@@ -1,14 +1,10 @@
 $(document).ready(function () {
-  var date_input = $('input[name="dob"]');
-  var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-  var today = new Date();
-  date_input.datepicker({
-    format: 'mm/dd/yyyy',
-    container: container,
-    todayHighlight: true,
+  $("#dateofbirth").datepicker({
+    format: 'mm-dd-yyyy',
+    endDate: '+0d',
     autoclose: true,
-    endDate: today,
   });
+
   $("#fname").keyup(function () {
     $("#fname").css('textTransform', 'capitalize');
   });
@@ -45,8 +41,9 @@ $(document).ready(function () {
     }
   });
 
-  $("#dateofbirth").change(function () {
-    if ($(this).val() == "") {
+  $("#dateofbirth").blur(function () {
+    var date1 = $("#dateofbirth").val();
+    if (date1 == "") {
       $("#date-blank").show();
     } else {
       $("#date-blank").hide();
@@ -93,32 +90,31 @@ $(document).ready(function () {
     var phoneNo = $("#phone").val();
 
     if (fName == "" || lName == "" || emailId == "" || dob == "" || phoneNo == "" || !isValidEmailAddress(emailId) || !isPhoneNumber(phoneNo)) {
-			if (fName == ""){
-				$("#fname-blank").show();
-    		} else {
-      	$("#fname-blank").hide();
-    	}
-			if (lName == ""){
-				$("#lname-blank").show();
-    		} else {
-      	$("#lname-blank").hide();
-    	}
-			if (emailId == ""){
-				$("#email-blank").show();
-    		} else {
-      	$("#email-blank").hide();
-    	}
-			if (dob == ""){
-				$("#date-blank").show();
-    		} else {
-      	$("#date-blank").hide();
-    	}
-			if (phoneNo == ""){
-				$("#phoneno-blank").show();
-    		} else {
-      	$("#phoneno-blank").hide();
-    	}
-      alert("fill the form completely");
+      if (fName == "") {
+        $("#fname-blank").show();
+      } else {
+        $("#fname-blank").hide();
+      }
+      if (lName == "") {
+        $("#lname-blank").show();
+      } else {
+        $("#lname-blank").hide();
+      }
+      if (emailId == "") {
+        $("#email-blank").show();
+      } else {
+        $("#email-blank").hide();
+      }
+      if (dob == "") {
+        $("#date-blank").show();
+      } else {
+        $("#date-blank").hide();
+      }
+      if (phoneNo == "") {
+        $("#phoneno-blank").show();
+      } else {
+        $("#phoneno-blank").hide();
+      }
 
     } else {
       var row = "<tr><td>" + capitalizeLetter(fName) + "</td><td>" + capitalizeLetter(lName) + "</td><td>" + emailId + "</td><td>" + dob + "</td><td>" + phoneNo + "</td></tr>";
