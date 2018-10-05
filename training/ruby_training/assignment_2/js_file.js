@@ -45,9 +45,10 @@ $(document).ready(function () {
     }
   });
 
-  $("#dateofbirth").blur(function () {
+  $("#dateofbirth").change(function () {
     if ($(this).val() == "") {
       $("#date-blank").show();
+    } else {
       $("#date-blank").hide();
     }
   });
