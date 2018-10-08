@@ -1,14 +1,10 @@
 $(document).ready(function () {
-  var date_input = $('input[name="dob"]');
-  var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-  var today = new Date();
-  date_input.datepicker({
-    format: 'mm/dd/yyyy',
-    container: container,
-    todayHighlight: true,
+	$("#dateofbirth").datepicker({
+    format: 'mm-dd-yyyy',
+    endDate: '+0d',
     autoclose: true,
-    endDate: today,
   });
+
   $("#fname").keyup(function () {
     $("#fname").css('textTransform', 'capitalize');
   });
@@ -46,10 +42,12 @@ $(document).ready(function () {
   });
 
   $("#dateofbirth").blur(function () {
-    if ($(this).val() == "") {
-      $("#date-blank").show();
-      $("#date-blank").hide();
-    }
+		var date1 = $("#dateofbirth").val();
+    if (date1 == "") {
+				$("#date-blank").show();
+    		} else {
+      	$("#date-blank").hide();
+    	}
   });
 
   $("#phone").blur(function () {
@@ -117,7 +115,6 @@ $(document).ready(function () {
     		} else {
       	$("#phoneno-blank").hide();
     	}
-      alert("fill the form completely");
 
     } else {
       var row = "<tr><td>" + capitalizeLetter(fName) + "</td><td>" + capitalizeLetter(lName) + "</td><td>" + emailId + "</td><td>" + dob + "</td><td>" + phoneNo + "</td></tr>";
