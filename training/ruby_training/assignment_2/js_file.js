@@ -1,5 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
 	$("#dateofbirth").datepicker({
+=======
+  $("#dateofbirth").datepicker({
+>>>>>>> 905df38531da797d778c8ffdb0f27504172f726a
     format: 'mm-dd-yyyy',
     endDate: '+0d',
     autoclose: true,
@@ -42,12 +46,21 @@ $(document).ready(function () {
   });
 
   $("#dateofbirth").blur(function () {
+<<<<<<< HEAD
 		var date1 = $("#dateofbirth").val();
     if (date1 == "") {
 				$("#date-blank").show();
     		} else {
       	$("#date-blank").hide();
     	}
+=======
+    var date1 = $("#dateofbirth").val();
+    if (date1 == "") {
+      $("#date-blank").show();
+    } else {
+      $("#date-blank").hide();
+    }
+>>>>>>> 905df38531da797d778c8ffdb0f27504172f726a
   });
 
   $("#phone").blur(function () {
@@ -90,6 +103,7 @@ $(document).ready(function () {
     var phoneNo = $("#phone").val();
 
     if (fName == "" || lName == "" || emailId == "" || dob == "" || phoneNo == "" || !isValidEmailAddress(emailId) || !isPhoneNumber(phoneNo)) {
+<<<<<<< HEAD
 			if (fName == ""){
 				$("#fname-blank").show();
     		} else {
@@ -115,6 +129,33 @@ $(document).ready(function () {
     		} else {
       	$("#phoneno-blank").hide();
     	}
+=======
+      if (fName == "") {
+        $("#fname-blank").show();
+      } else {
+        $("#fname-blank").hide();
+      }
+      if (lName == "") {
+        $("#lname-blank").show();
+      } else {
+        $("#lname-blank").hide();
+      }
+      if (emailId == "") {
+        $("#email-blank").show();
+      } else {
+        $("#email-blank").hide();
+      }
+      if (dob == "") {
+        $("#date-blank").show();
+      } else {
+        $("#date-blank").hide();
+      }
+      if (phoneNo == "") {
+        $("#phoneno-blank").show();
+      } else {
+        $("#phoneno-blank").hide();
+      }
+>>>>>>> 905df38531da797d778c8ffdb0f27504172f726a
 
     } else {
       var row = "<tr><td>" + capitalizeLetter(fName) + "</td><td>" + capitalizeLetter(lName) + "</td><td>" + emailId + "</td><td>" + dob + "</td><td>" + phoneNo + "</td></tr>";
