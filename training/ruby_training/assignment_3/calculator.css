@@ -1,4 +1,5 @@
 .insert-value {
+	text-align : right;
   height: 80px;
   width: 510px;
 }
@@ -17,9 +18,10 @@
 
 body {
   margin-top: 20px;
+  width:1000px;
 }
 
-.number {
+.number, .percentage {
   color: white;
   background-color: #6f6f6f;
   font-size: 14px;
@@ -30,6 +32,20 @@ body {
   margin-top: 20px;
   margin-left: 3.2px;
 }
+
+
+.function, .equal {
+  color: white;
+  background-color: #be3416;
+  font-size: 14px;
+  margin: auto;
+  width: 80px;
+  height: 50px;
+  margin-right: 16.6px;
+  margin-top: 20px;
+  margin-left: 3.2px;
+}
+
 
 .cancel {
   color: white;
@@ -43,6 +59,6 @@ body {
   margin-left: 3.2px;
 }
 
-#value {
+#value1 {
   text-align: right;
 }
