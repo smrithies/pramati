@@ -1,5 +1,19 @@
+.top-space{
+	padding-top : 20px;
+}
+
 .validation-error {
-	padding-left:1em;
+	padding-left : 1em;
 	display : none;
 	color : red;
+}
+.scrollme {
+  height : 200px;
+  overflow-y : auto;
+	width : 100%;
+}
+
+.scroll { 
+	overflow-y : auto;
+	width : 100%;
 }
