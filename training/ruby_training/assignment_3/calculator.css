@@ -21,7 +21,7 @@ body {
   width:1000px;
 }
 
-.number, .percentage {
+.number, .percentage, .factorial, .sqrt {
   color: white;
   background-color: #6f6f6f;
   font-size: 14px;
