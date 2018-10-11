@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  $("#dateofbirth").datepicker({
+  $( "#dateofbirth").datepicker({
     format: 'mm-dd-yyyy',
-    endDate: '+0d',
+    endDate: '0d',
     autoclose: true,
   });
 
@@ -12,7 +12,13 @@ $(document).ready(function () {
   $("#fname").blur(function () {
     if ($(this).val() == "") {
       $("#fname-blank").show();
-    } else {
+      $("#fname-error").hide();
+    } else if(!(/^[a-zA-Z][a-zA-Z\' ']{0,20}?$/).test($("#fname").val())){
+      $("#fname-error").show();
+      $("#fname-blank").hide();
+    }
+    else{
+      $("#fname-error").hide();
       $("#fname-blank").hide();
     }
   });
@@ -20,7 +26,12 @@ $(document).ready(function () {
   $("#lname").blur(function () {
     if ($(this).val() == "") {
       $("#lname-blank").show();
-    } else {
+    } else if(!(/^[a-zA-Z][a-zA-Z\' ']{0,20}$/).test($("#fname").val())){
+      $("#lname-error").show();
+      $("#lname-blank").hide();
+    }
+    else{
+      $("#lname-error").hide();
       $("#lname-blank").hide();
     }
   });
@@ -40,7 +51,6 @@ $(document).ready(function () {
       $("#email-blank").hide();
     }
   });
-
   $("#dateofbirth").blur(function () {
 		var date1 = $("#dateofbirth").val();
     if (date1 == "") {
@@ -98,55 +108,19 @@ $(document).ready(function () {
     if (fName == "" || lName == "" || emailId == "" || dob == "" || phoneNo == "" || !isValidEmailAddress(emailId) || !isPhoneNumber(phoneNo)) {
 			if (fName == ""){
 				$("#fname-blank").show();
-    		} else {
-      	$("#fname-blank").hide();
-    	}
+    		}
 			if (lName == ""){
 				$("#lname-blank").show();
-    		} else {
-      	$("#lname-blank").hide();
-    	}
+    		}
 			if (emailId == ""){
 				$("#email-blank").show();
-    		} else {
-      	$("#email-blank").hide();
-    	}
+    		}
 			if (dob == ""){
 				$("#date-blank").show();
-    		} else {
-      	$("#date-blank").hide();
-    	}
+    		}
 			if (phoneNo == ""){
 				$("#phoneno-blank").show();
-    		} else {
-      	$("#phoneno-blank").hide();
-    	}
-      if (fName == "") {
-        $("#fname-blank").show();
-      } else {
-        $("#fname-blank").hide();
-      }
-      if (lName == "") {
-        $("#lname-blank").show();
-      } else {
-        $("#lname-blank").hide();
-      }
-      if (emailId == "") {
-        $("#email-blank").show();
-      } else {
-        $("#email-blank").hide();
-      }
-      if (dob == "") {
-        $("#date-blank").show();
-      } else {
-        $("#date-blank").hide();
-      }
-      if (phoneNo == "") {
-        $("#phoneno-blank").show();
-      } else {
-        $("#phoneno-blank").hide();
-      }
-
+    		} 
     } else {
       var row = "<tr><td>" + capitalizeLetter(fName) + "</td><td>" + capitalizeLetter(lName) + "</td><td>" + emailId + "</td><td>" + dob + "</td><td>" + phoneNo + "</td></tr>";
       $("#contact").append(row);

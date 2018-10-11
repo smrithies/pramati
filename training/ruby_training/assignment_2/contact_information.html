@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,106 +16,110 @@
     <link rel="stylesheet" type="text/css" href="css_file.css">
   </head>
   <body>
-    <div class="container">
-		  <div class="row top-space">
-		    <div class="col-md-8 col-md-offset-2 well">
-		      <div class="panel panel-primary">
-		        <div class="panel-heading text-center">Contact Details</div>
-		      </div>
-		      <form id="fillForm" action="" class="form-signin">
-						<div class="row">
-						<div class="panel-body">
-							<div class="col-md-2">
-		          	<label for="fname">First Name:</label>
-							</div>
-							<div class="col-md-6">
-		          	<input type="text" class="form-control" id="fname" name="fname" placeholder="first name" autocomplete="off"></input>
-							</div>
-							<div>
-		          	<span id="fname-blank" class="validation-error"> Enter first name correctly</span>
-		        	</div>
-						</div>
-						</div>
-						<div class="row">
-							<div class="panel-body">
-								<div class="col-md-2">
-		          		<label for="lname">Last Name:</label>
-								</div>
-								<div class="col-md-6">
-		          		<input type="text" class="form-control" id="lname" name="lname" placeholder="last name" autocomplete="off"/>
-								</div>
-								<div>
-		          		<span id="lname-blank" class="validation-error">Last name cannot be blank</span>
-								</div>
-							</div>
-						</div>
-		        <div class="row">
-							<div class="panel-body">
-								<div class="col-md-2">
-		          		<label for="email">Email:</label>
-								</div>
-								<div class="col-md-6">
-		          		<input type="email" class="form-control" id="email" size=35 name="email" placeholder="Enter email" autocomplete="off">
-								</div>
-								<div>
-		         			<span class="validation-error" id="email-blank">Email cannot be blank</span>
-		          		<span id="email-error" class="validation-error"> Enter email correctly</span>
-		        		</div>
-							</div>
-						</div>
-		        <div class="row">
-							<div class="panel-body">
-								<div class="col-md-2">
-		          		<label for="dob">Date of Birth:</label>
-								</div>
-								<div class="col-md-6">
-		          		<input type="text" class="form-control" id="dateofbirth" size=35 name="dob" placeholder="MM/DD/YYYY" autocomplete="off">
-								</div>
-								<div>
-		          		<span class="validation-error" id="date-blank">Date of birth field cannot be blank</span>	
-								</div>
-							</div>
-		        </div>
-		        <div class="row">
-							<div class="panel-body">
-								<div class="col-md-2">
-		          		<label for="phone no">Phone no:</label>
-								</div>
-								<div class="col-md-6">
-		          		<input type="text" class="form-control" id="phone" size=35 name="phoneno" placeholder="phone no" autocomplete="off">
-								</div>
-								<div>
-		          		<span class="validation-error" id="phoneno-blank">Phone no cannot be blank</span>
-		          		<span class="validation-error" id="phoneno-error">Enter phone number correctly</span>
-								</div>
-							</div>
-		        </div>
-		        <div align="center">
-		          <button type="button" id="submit-button" class="btn btn-primary">submit</button>
-		        </div>
-		      </form>
-		    </div>
-		  </div>
-		  <div class="row">
-		    <div class="col-md-8 col-md-offset-2 well">
-		      <div class="panel panel-primary scroll">
-		        <div class="panel-heading text-center scroll">Contact Details Table</div>
-		      </div>
-					<div class="table-responsive">
-		      <table id="contact" class="table table-bordered">
-		        <thead class="table-dark text-center">
-		          <th>First Name</th>
-		          <th>Last Name</th>
-		          <th>Email</th>
-		          <th>Date of Birth</th>
-		          <th>Phone no</th>
-		        </thead>
-		        <tbody>
-		        </tbody>
-		      </table>
-					</div>
-				</div>
+    <div class="container-fluid">
+      <div class="row top-space">
+        <div class="col-md-8 col-md-offset-2 well">
+          <div class="panel panel-primary">
+            <div class="panel-heading text-center">Contact Details</div>
+          </div>
+          <form id="fillForm" action="" method="post" class="form-signin" >
+            <div class="row">
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <label for="fname">First Name:</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" autocomplete="off">
+                </div>
+                <div>
+                  <span id="fname-blank" class="validation-error">First name cannot be blank</span>
+                  <span id="fname-error" class="validation-error"> Enter first name correctly</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <label for="lname">Last Name:</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" autocomplete="off"/>
+                </div>
+                <div>
+                  <span id="lname-blank" class="validation-error">Last name cannot be blank</span>
+                  <span id="lname-error" class="validation-error"> Enter last name correctly</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <label for="email">Email:</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" id="email" size=35 name="email" placeholder="Enter email" autocomplete="off">
+                </div>
+                <div>
+                  <span class="validation-error" id="email-blank">Email cannot be blank</span>
+                  <span id="email-error" class="validation-error"> Enter email correctly</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <label for="dob">Date of Birth:</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="dateofbirth" size=35 name="dob" placeholder="MM/DD/YYYY" autocomplete="off">
+                </div>
+                <div>
+                  <span class="validation-error" id="date-blank">Date of birth cannot be blank</span>	
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <label for="Phone no">Phone no:</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="phone" size=35 name="phoneno" placeholder="phone no" autocomplete="off">
+                </div>
+                <div>
+                  <span class="validation-error" id="phoneno-blank">Phone number cannot be blank</span>
+                  <span class="validation-error" id="phoneno-error">Enter phone number correctly</span>
+                </div>
+              </div>
+            </div>
+            <div align="center">
+              <input type="button" id="submit-button" class="btn btn-primary" value="submit"></input>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 well">
+          <div class="panel panel-primary scroll">
+            <div class="panel-heading text-center scroll">Contact Details Table</div>
+          </div>
+          <div class="table-responsive">
+            <table id="contact" class="table table-bordered">
+              <thead class="table-dark text-center">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Phone no</th>
+              </thead>
+              <tbody>
+              	<tr><td>sdfs</td><td>dfsf</td><td>dfsdf</td><td>sdfsd</td><td>dfd</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </body>
 </html>
+
