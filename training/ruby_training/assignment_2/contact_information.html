@@ -1,22 +1,19 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>javascript.html</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <script type="text/javascript" src="js_file.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="js_file.js"></script>
     <link rel="stylesheet" type="text/css" href="css_file.css">
-  </head>
+  </head> 
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid red">
       <div class="row top-space">
         <div class="col-md-8 col-md-offset-2 well">
           <div class="panel panel-primary">
@@ -29,7 +26,7 @@
                   <label for="fname">First Name:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" autocomplete="off">
+                  <input type="text" class="form-control capitalise" id="fname" name="fname" placeholder="First Name" autocomplete="off">
                 </div>
                 <div>
                   <span id="fname-blank" class="validation-error">First name cannot be blank</span>
@@ -43,7 +40,7 @@
                   <label for="lname">Last Name:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" autocomplete="off"/>
+                  <input type="text" class="form-control capitalise" id="lname" name="lname" placeholder="Last Name" autocomplete="off"/>
                 </div>
                 <div>
                   <span id="lname-blank" class="validation-error">Last name cannot be blank</span>
@@ -118,8 +115,3 @@
             </table>
           </div>
         </div>
-      </div>
-    </div>
-  </body>
-</html>
-
