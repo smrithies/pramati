@@ -4,12 +4,12 @@
     <title>javascript.html</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
-	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-	<script type="text/javascript" src="js_file.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+  <script type="text/javascript" src="js_file.js"></script>
     <link rel="stylesheet" type="text/css" href="css_file.css">
   </head> 
   <body>
@@ -20,82 +20,78 @@
             <div class="panel-heading text-center">Contact Details</div>
           </div>
           <form id="fillForm" action="" method="post" class="form-signin" >
-            <div class="row">
+            <div class="row detailsEnter">
               <div class="panel-body">
                 <div class="col-md-2">
                   <label for="fname">First Name:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control capitalise" id="fname" name="fname" placeholder="First Name" autocomplete="off">
+                  <input type="text" class="form-control capitalise name" id="fname" name="fname" data-pattern="name" placeholder="First Name" autocomplete="off">
                 </div>
                 <div>
-                  <span id="fname-blank" class="validation-error">First name cannot be blank</span>
-                  <span id="fname-error" class="validation-error"> Enter first name correctly</span>
+                  <span class="validation-error">Enter first name correctly</span>
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row detailsEnter">
               <div class="panel-body">
                 <div class="col-md-2">
                   <label for="lname">Last Name:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control capitalise" id="lname" name="lname" placeholder="Last Name" autocomplete="off"/>
+                  <input type="text" class="form-control capitalise name" id="lname" name="lname" data-pattern="name" placeholder="Last Name" autocomplete="off"/>
                 </div>
                 <div>
-                  <span id="lname-blank" class="validation-error">Last name cannot be blank</span>
-                  <span id="lname-error" class="validation-error"> Enter last name correctly</span>
+                  <span class="validation-error"> </span>
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row detailsEnter">
               <div class="panel-body">
                 <div class="col-md-2">
                   <label for="email">Email:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control" id="email" size=35 name="email" placeholder="Enter email" autocomplete="off">
+                  <input type="email" class="form-control email" size=35 id="email" name="email" data-pattern="email" placeholder="Enter email" autocomplete="off">
                 </div>
                 <div>
-                  <span class="validation-error" id="email-blank">Email cannot be blank</span>
-                  <span id="email-error" class="validation-error"> Enter email correctly</span>
+                  <span class="validation-error"></span>
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row detailsEnter">
               <div class="panel-body">
                 <div class="col-md-2">
                   <label for="dob">Date of Birth:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="dateofbirth" size=35 name="dob" placeholder="MM/DD/YYYY" autocomplete="off">
+                  <input type="text" class="form-control dateofbirth" size=35 id="dateofbirth" name="dob" placeholder="MM/DD/YYYY" autocomplete="off">
                 </div>
                 <div>
-                  <span class="validation-error" id="date-blank">Date of birth cannot be blank</span>	
+                  <span class="validation-error" id="date-blank"></span> 
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row detailsEnter">
               <div class="panel-body">
                 <div class="col-md-2">
                   <label for="Phone no">Phone no:</label>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="phone" size=35 name="phoneno" placeholder="phone no" autocomplete="off">
+                  <input type="text" class="form-control phoneno" id="phone" size=35 name="phoneno" data-pattern="phone" placeholder="phone no" autocomplete="off">
                 </div>
                 <div>
-                  <span class="validation-error" id="phoneno-blank">Phone number cannot be blank</span>
-                  <span class="validation-error" id="phoneno-error">Enter phone number correctly</span>
+                  <span class="validation-error"></span>
                 </div>
               </div>
             </div>
             <div align="center">
-              <input type="button" id="submit-button" class="btn btn-primary" value="submit"></input>
+              <button type="button" id="submit-button" class="btn btn-primary" value="submit" onclick="submitValidation()">Submit</input>
             </div>
           </form>
         </div>
       </div>
-      <div class="row">
+      <div class="row detailsEnter">
         <div class="col-md-8 col-md-offset-2 well">
           <div class="panel panel-primary scroll">
             <div class="panel-heading text-center scroll">Contact Details Table</div>
@@ -110,7 +106,7 @@
                 <th>Phone no</th>
               </thead>
               <tbody>
-              	<tr><td>sdfs</td><td>dfsf</td><td>dfsdf</td><td>sdfsd</td><td>dfd</td></tr>
+                <tr><td>sdfs</td><td>dfsf</td><td>dfsdf</td><td>sdfsd</td><td>dfd</td></tr>
               </tbody>
             </table>
           </div>

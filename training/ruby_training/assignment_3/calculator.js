@@ -1,7 +1,8 @@
 $(document).ready(function () {
 	$(".number").click(function (e) {
     var inputValue = $("#display1").val();
-		$("#display1").val(inputValue + $(this).val());
+    var buttonValue = $(this).val();
+		$("#display1").val(inputValue + buttonValue);
 	});
 
 	$(".end1").click(function () {
@@ -15,7 +16,9 @@ $(document).ready(function () {
   });
 
 	$(".equal").click(function () {
-		$("#display1").val(eval($("#display1").val()));
+		var previousVal = $('#display1').val();
+    var newValue = $(this).val();
+    $('#display1').val(previousVal + newValue + eval(previousVal));
 	});
 
 	$("#sine-func").click(function () {
@@ -28,10 +31,6 @@ $(document).ready(function () {
 
   $("#tan-func").click(function () {
     $("#display1").val(Math.tan($("#display1").val()));
-  });
-
-  $("#log-func").click(function () {
-    $("#display1").val(Math.log($("#display1").val()));
   });
 
   $("#log-func").click(function () {
@@ -57,12 +56,8 @@ $(document).ready(function () {
   $("#pi").click(function () {
     $("#display1").val(Math.PI);
   });
-
-  function numFactorial(number){
-    if(number == 0) {
-        return 1
-    } else {
-        return number * numFactorial(number - 1);
-    }
-}
 });
+
+function numFactorial(number){
+  return (number<1)? 1 : numFactorial(number-1)*number
+}
