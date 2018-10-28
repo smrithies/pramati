@@ -5,21 +5,21 @@ $row_bottom_index = 7
 $column_top_index = 0
 $column_bottom_index = 7
 $flag = 0
-$temp = 0
-$temp1 = 0
-$temp2 = 0
-$temp3 = 0
+$vertical_count = 0
+$horizontal_count = 0
+$left_diagonal_count = 0
+$right_diagonal_count = 0
 
-class Read
+class ConnectFour
   def read_input
-    while($temp != 4 && $temp1 != 4 && $temp2 != 4) do
+    while($vertical_count != 4 && $horizontal_count != 4 && $left_diagonal_count != 4 && $right_diagonal_count != 4)
       if $flag == 0
         puts "Player 1"
         $x = gets.chomp.to_i
         if $x > 7
           puts "Enter valid column number"
         else
-          vertical($x-1,"*",1)
+          insert($x-1,"*",1)
           $flag = 1
          end
       else
@@ -28,127 +28,117 @@ class Read
         if $x > 7
           puts "Enter valid column number"
         else
-          vertical($x-1,"+",2)
+          insert($x-1,"+",2)
           $flag = 0
         end
       end
     end
   end
-  def vertical(column,value,player)
-   #puts $array[$row][column]
-    while($array[$row][column] != 0) do
+
+  def insert(column,value,player)
+    while($array[$row][column] != 0)
       $row = $row - 1
     end
     $array[$row][column] = value
-    display_array(value, column, player)
+    display_array(column, value, player)
   end
 
-  def display_array(value, column, player)
+  def display_array(column, value, player)
       $array.each do |arr|
          arr.each do |item|
             print "#{item}   "
          end
          print "\n"
       end
-      match(value, column, player)
+      check(column, value, player)
       $row = 6
   end
-  def match(value, column, player)
-      vertical1(value, column, player)
-      horizontal(value, column, player)
-      left_diagonal_match(value, column, player)
-      right_diagonal_match(value, column, player)
-      #checkWinner(value, column, player)
+
+  def check(column, value, player)
+      vertical_check(column, value, player)
+      horizontal_check(column, value, player)
+      left_diagonal_check(column, value, player)
+      right_diagonal_check(column, value, player)
   end
 
-  def vertical1(value, column, player)
+  def vertical_check(column, value, player)
     i = 0
-    while $temp != 4 && i != 7
+    while $vertical_count != 4 && i != 7
       if $array[i][column] == value
-        $temp = $temp + 1
+        $vertical_count = $vertical_count + 1
       else
-        $temp = 0
+        $vertical_count = 0
       end
-      if $temp == 4
+      if $vertical_count == 4
         checkWinner(player)
       end
       i = i + 1
     end
   end
 
-  def horizontal(value, column, player)
+  def horizontal_check(column, value, player)
     i = 0
-    while $temp1 != 4 && i != 7
+    while $horizontal_count != 4 && i != 7
       if $array[$row][i] == value
-        $temp1 = $temp1 + 1
+        $horizontal_count = $horizontal_count + 1
       else
-        $temp1 = 0
+        $horizontal_count = 0
      
       end
-      if $temp1 == 4
+      if $horizontal_count == 4
         checkWinner(player)
       end
       i = i + 1
     end
   end
 
-  def right_diagonal_match(value, column, player)
-      diagonal_row = $row
-      diagonal_column = column
-      while diagonal_row > $row_top_index && diagonal_column > $column_bottom_index
-        diagonal_row = $row - 1
-        diagonal_column = column + 1
+  def right_diagonal_check(column, value, player)
+    diagonal_row = $row
+    diagonal_column = column
+    while diagonal_row > $row_top_index && diagonal_column < $column_bottom_index
+      diagonal_row = diagonal_row -1
+      diagonal_column = diagonal_column + 1
+    end
+    while diagonal_row != $row_bottom_index && diagonal_column >= $column_top_index  && $right_diagonal_count != 4 
+      #puts $array[diagonal_row][diagonal_column]
+      if $array[diagonal_row][diagonal_column] == value
+        $right_diagonal_count = $right_diagonal_count + 1
+      else
+        $right_diagonal_count = 0
       end
-      while diagonal_row != $row_bottom_index && diagonal_column != $column_bottom_index  && $temp3 != 4 
-        if $array[diagonal_row][diagonal_column] == value
-          $temp3 = $temp3 + 1
-        else
-          $temp3 = 0
-        end
-        diagonal_row = diagonal_row + 1
-        diagonal_column = diagonal_column - 1
-        if $temp3 == 4
-          checkWinner(player)
-        end
+      diagonal_row = diagonal_row + 1
+      diagonal_column = diagonal_column - 1
+      if $right_diagonal_count == 4
+        checkWinner(player)
       end
     end
+  end
 
-    def left_diagonal_match(value, column, player)
-      diagonal_row = $row
-      diagonal_column = column
-      while diagonal_row >= $row_top_index && diagonal_column >= $column_top_index && $temp2 != 4
-        #puts $array[diagonal_row][diagonal_column]
-        if $array[diagonal_row][diagonal_column] == value
-          $temp2 = $temp2 + 1
-        else
-          $temp2 = 0
-        end
-        diagonal_row = diagonal_row - 1
-        diagonal_column = diagonal_column - 1
-        if $temp2 == 4
-          checkWinner(player)
-        end
+  def left_diagonal_check(column, value, player)
+    diagonal_row = $row
+    diagonal_column = column
+    while diagonal_row > $row_top_index && diagonal_column > $column_top_index
+      diagonal_row = diagonal_row - 1
+      diagonal_column = diagonal_column - 1 
+    end
+    while diagonal_row != $row_bottom_index && diagonal_column != $column_bottom_index  && $left_diagonal_count != 4 
+      if $array[diagonal_row][diagonal_column] == value
+        $left_diagonal_count = $left_diagonal_count + 1
+      else
+        $left_diagonal_count = 0
       end
-      diagonal_row = $row + 1
-      diagonal_column = column + 1
-      while diagonal_row != $row_bottom_index && diagonal_column != $column_bottom_index  && $temp2 != 4 
-        if $array[diagonal_row][diagonal_column] == value
-          $temp2 = $temp2 + 1
-        else
-          $temp2 = 0
-        end
-        diagonal_row = diagonal_row + 1
-        diagonal_column = diagonal_column + 1
-        if $temp2 == 4
-          checkWinner(player)
-        end
+      diagonal_row = diagonal_row + 1
+      diagonal_column = diagonal_column + 1
+      if $left_diagonal_count == 4
+        checkWinner(player)
       end
     end
+  end
 
   def checkWinner(player)
-        print "Player ",player," wins."
-        puts
-    end
+    print "Player ",player," wins."
+    puts
+  end
 end
-  object = Read.new
+  object = ConnectFour.new
   object.read_input
