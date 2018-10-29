@@ -131,7 +131,7 @@
   list-style-image: url('bullet.png');
 }
 
-.home-link {
+/*.home-link {
   padding-right: 30px;
   padding-left: 20px;
   border-right: 1px solid black;
@@ -153,6 +153,7 @@
   color: black;
   text-decoration: none;
 }
+*/
 
 .align-right {
   float: right;
