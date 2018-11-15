@@ -82,11 +82,11 @@ resources :resource_name
 **Associations**
   - Connection between two Active Record models
   - Types of association
-		- belongs\_to -> sets up a one-to-one connection with another model, such that each instance of the declaring model "belongs to" one instance of the other model.  
-		- has\_one -> one-to-one only, association indicates that each instance of a model contains or possesses one instance of another model
-		- has\_many -> one-to-many, indicates that each instance of the model has zero or more instances of another model.  
-		- has\_many :through -> many-to-many, indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model.  
-		- has\_one :through -> one-to-one,  indicates that the declaring model can be matched with one instance of another model by proceeding through a third model.  
-		- has\_and\_belongs\_to\_many -> creates a direct many-to-many connection with another model, with no intervening model.  
+    - **belongs\_to** -> sets up a one-to-one connection with another model, such that each instance of the declaring model "belongs to" one instance of the other model.  
+    - **has\_one** -> one-to-one only, association indicates that each instance of a model contains or possesses one instance of another model.  
+    - **has\_many** -> one-to-many, indicates that each instance of the model has zero or more instances of another model.  
+    - **has\_many** :through -> many-to-many, indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model.  
+    - **has\_one** :through -> one-to-one,  indicates that the declaring model can be matched with one instance of another model by proceeding through a third model.  
+    - **has\_and\_belongs\_to\_many** -> creates a direct many-to-many connection with another model, with no intervening model.  
 
 
