@@ -116,12 +116,12 @@ bin/solr post -c techproducts exaple/exampledocs/*
   * 
 
   * **Parameters**
-    - **q**: query parameter -> to specify some direct words or phrases which will be searched in entire fields or can also specify the category. 
-```
+   - **q**: query parameter -> to specify some direct words or phrases which will be searched in entire fields or can also specify the category. 
+    ```
 eg:-
  - q = electronics(in all fields)
  - q = cat:electronics(only in cat field)
  - q = "the schema"(support to search for phrases-"phrase"-> **phrase search**)
  - Phrase search using curl -> curl "http://localhost:8983/solr/techproducts/select?q=\"the**+**schema\""
-```
-    - **fl**: field parameter -> to limit the fields in the response.(eg: particular category defined(q=cat:electronics - **field search**) and in that only some fields need to be retrieved(id,name). 
+    ```  
+   - **fl**: field parameter -> to limit the fields in the response.(eg: particular category defined(q=cat:electronics - **field search**) and in that only some fields need to be retrieved(id,name). 
