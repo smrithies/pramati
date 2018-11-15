@@ -33,35 +33,35 @@
 
 ### Ruby syntax
 
-* single line comment
+#### single line comment
 ```
 \# comment
 ```
-* multiline comment
+#### multiline comment
 ```
 =begin
 	comments
 =end 
 ```
-* To insert computations into text strings
+#### To insert computations into text strings
 ```
 The \#{compute} 
 eg:- "the \#{1+2}" or cars=30 "the \#{cars}"
 ```
-* To get input from users
+#### To get input from users
 ```
 gets.chomp
 gets.chomp.to_i(for integers)
 gets.chomp.to_s(to strings)
 ```
-* Print statements
+#### Print statements
 ```
 print/puts "statement"(puts to print new line)
 ```
 > \+, −, or backslash at the end of a line, they indicate the continuation of a statement.
 > newline or ; - end of statement
 
-* BEGIN statement
+#### BEGIN statement
 ```
 Declares code to be called before the program is run.
 
@@ -69,7 +69,7 @@ Declares code to be called before the program is run.
    code
 	}
 ```
-* END statement
+#### END statement
 ```
 Declares code to be called at the end of the program.
 
@@ -78,20 +78,23 @@ Declares code to be called at the end of the program.
 	}
 ```
 
--> class
-
+#### Class
+  - Starts with capital letter.
+  - Template or a blue print for objects.
+```
 class Customer
 end
-
-> Creating Objects in Ruby using new Method
-* by using the method new of the class.
-* method new is a unique type of method and is predefined.
-* new method belongs to the class methods.
+```
+#### Objects
+  - By using the method new of the class.
+  - Method new is a unique type of method and is predefined.
+  - ew method belongs to the class methods.
+```
 eg:- object_name = Class_name.new
-> Custom Method to Create Ruby Objects
-* pass parameters to method new and those parameters can be used to initialize class variables.
-* to declare the 'new' method with parameters, you need to declare the method initialize at the time of the class creation.
-* initialise method - executed when the new method of the class is called with parameters.
+```
+#### Methods/functions
+  - initialise method - executed when the new method of the class is called with parameters.
+```
 eg:-
 class Customer
    @@no_of_customers = 0
@@ -103,13 +106,92 @@ class Customer
 end
 
 cust1 = Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
-
->Member Functions in Ruby Class
-* lowercase letters.
-* class Sample
+```
+  - Methods are in lowercase letters.
+```
+eg:-
+  class Sample
    def function
       statement 1
       statement 2
    end
   end
+```
+
+#### Conditional statements
+
+**If-else**
+  - Conditional execution
+ ```
+if conditional [then]
+   code...
+[elsif conditional [then]
+   code...]...
+[else
+   code...]
+end
+```
+**unless**
+  - Execute code while conditional is false
+```
+unless conditional [then]
+   code
+[else
+   code ]
+end
+```
+**Case statements**
+  - Evaluate the case statement conditional and execute when clause
+```
+case expression
+[when expression [, expression ...] [then]
+   code ]...
+[else
+   code ]
+end
+```
+
+#### Loop statements
+
+**while**
+  - Execute till the conditional become false.
+```
+while conditional [do]
+   code
+end
+```
+**until**
+ - Execute till the conditional is false
+```
+until conditional [do]
+   code
+end
+```
+**for loop**
+```
+for i in 0..5(0...5-excluding 5)
+	statements
+end
+```
+**each loop**
+```
+(expression).each do |variable| code end
+```
+**Break statement**
+  - To exit form a loop.
+
+#### Arrays
+```
+array = [] or array = Array.new
+```
+* Starts from 0 index, array[-1] points to last element.
+**Functions or methods to manipulate array**
+```
+array.push(element) - insert element to the end of the array
+array.pull - delete element from end of array
+array.unshift - insert element to the front of the array
+array.shift - delete element from the front of the array
+```
+
+
 
