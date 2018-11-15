@@ -83,3 +83,45 @@ bin/post -c core_name file_name
 ```
 bin/solr start -e example_name
 ```
+
+#### Launch solr in cloud mode exercise
+```
+bin/solr start -e cloud
+```
+* launch a solr cloud cluster and without using -noprompt at the end it will ask for nodes and port.
+* Two instances of nodes will start on two nodes.
+* Solr launches its own ZooKeeper since we havent specify external and connects both nodes to it.
+**zookeeper**
+```
+* Zookeeper helps you quickly push configuration changes.  
+* Its primary purpose is cluster management.  
+* Zookeeper relays important information about configuration changes across clusters.  
+* Zookeeper can act as service locator for a node to find the database it has to work on.  
+* Each process goes to zookeeper and if it finds a database has failed and selected a new primary database it will relays same information to other clusters that depends on that database.
+* Zookeeper helps in coordination behaviour between clusters.
+```
+* Create a collection for indexing data that forms a cluster of two nodes.
+* Ask for number of shards ie splitting the index accross the nodes( 2 default means equally distributing/evenly).
+* Select a config file which will at minimum include a schema file and solrconfig.xml.
+* **Index the documents via post command**
+```
+bin/solr post -c techproducts exaple/exampledocs/*
+```
+* **Basic searching**
+  * via solr admin UI - includes a query builder interface in which a query tab.
+  * via curl in command line : curl "http://localhost:8983/solr/techproducts/select?indent=on&q=*\:*"
+  * Response contains a response header and result.
+  * Respose header: Have the parameters set for the query.
+  * fl param: to limit the fields in the response.(eg: particular category defined(q=cat:electronics) and in that only some fields need to be retrieved(id,name).
+  * 
+
+  * **Parameters**
+    - **q**: query parameter -> to specify some direct words or phrases which will be searched in entire fields or can also specify the category. 
+```
+eg:-
+ - q = electronics(in all fields)
+ - q = cat:electronics(only in cat field)
+ - q = "the schema"(support to search for phrases-"phrase"-> **phrase search**)
+ - Phrase search using curl -> curl "http://localhost:8983/solr/techproducts/select?q=\"the**+**schema\""
+```
+    - **fl**: field parameter -> to limit the fields in the response.(eg: particular category defined(q=cat:electronics - **field search**) and in that only some fields need to be retrieved(id,name). 
