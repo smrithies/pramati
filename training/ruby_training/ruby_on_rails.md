@@ -20,7 +20,7 @@ rails g controller Controller_name action/view[optional]
     - *Update*:- Update an existing resource
 ### Model
   - Processes the data according to the instructions of controller.
-  - The model is responsible for getting data from a database, packaging it in data objects that can be understood by other components, and delivering those objects.
+  - The model is responsible for getting data from a database, packaging it in data objects that can be understood by other components, and delivering those objects.  
   **Creating models**
 ```
 rails g model model_name parameters(field1:type field2:type)
@@ -28,11 +28,11 @@ rails g model model_name parameters(field1:type field2:type)
   **Migrations**
    - Used to alter database schema.
 ```
-rails generate migration AddColumn\_nameToTable\_name
+rails generate migration AddColumn_nameToTable_name
 ```
    - Create a migration file
 ```
-class AddColumn\_nameToTable\_name << ActiveRecord::Migration[5.0]
+class AddColumn_nameToTable_name << ActiveRecord::Migration[5.0]
  def change
  end
 end
@@ -81,12 +81,12 @@ resources :resource_name
 
 **Associations**
   - Connection between two Active Record models
-  - Types of association:-
-		- belongs_to -> sets up a one-to-one connection with another model, such that each instance of the declaring model "belongs to" one instance of the other model. 
-		- has_one -> one-to-one only, association indicates that each instance of a model contains or possesses one instance of another model
-		- has_many -> one-to-many, indicates that each instance of the model has zero or more instances of another model.
-		- has_many :through -> many-to-many, indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model
-		- has_one :through -> one-to-one,  indicates that the declaring model can be matched with one instance of another model by proceeding through a third model.
-		- has_and_belongs_to_many -> creates a direct many-to-many connection with another model, with no intervening model
+  - Types of association
+		- belongs\_to -> sets up a one-to-one connection with another model, such that each instance of the declaring model "belongs to" one instance of the other model.  
+		- has\_one -> one-to-one only, association indicates that each instance of a model contains or possesses one instance of another model
+		- has\_many -> one-to-many, indicates that each instance of the model has zero or more instances of another model.  
+		- has\_many :through -> many-to-many, indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model.  
+		- has\_one :through -> one-to-one,  indicates that the declaring model can be matched with one instance of another model by proceeding through a third model.  
+		- has\_and\_belongs\_to\_many -> creates a direct many-to-many connection with another model, with no intervening model.  
 
 
