@@ -1,4 +1,4 @@
-### SOLR
+## SOLR
 
 * Open-source search platform
 * Built over lucene java search library
@@ -8,10 +8,10 @@
 * Default port number is 8983
 * Use inverted index to search and providing results.
 ```
-**Inverted Index**
+##### Inverted Index
 Takes all documents, splits them into words and then build and index for each word which will be usually document id where that word has been refered(eg:- index in a book).  
 ```
-Users can search for information by passing queries into the Search Engine in the form of keywords or phrases. The Search Engine then searches in its database and returns relevant links to the user.
+> Users can search for information by passing queries into the Search Engine in the form of keywords or phrases. The Search Engine then searches in its database and returns relevant links to the user.
 
 * Full-text searched application 
 * Provide ranking based on keywords.
@@ -45,7 +45,7 @@ Users can search for information by passing queries into the Search Engine in th
 
 #### Running solr
 
-**bin/solr scripts in bin directory**
+* **bin/solr scripts in bin directory**
 
 * To run in backward
 ```
