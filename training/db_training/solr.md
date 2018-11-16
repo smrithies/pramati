@@ -110,6 +110,7 @@ bin/solr post -c techproducts exaple/exampledocs/*
 * **Basic searching**
   * via solr admin UI - includes a query builder interface in which a query tab.
   * via curl in command line : curl "http://localhost:8983/solr/techproducts/select?indent=on&q=*\:*"
+	* Results are usually returned in xml format(can mold to other solr formats like JSON, php or ruby).
   * Response contains a response header and result.
   * Respose header: Have the parameters set for the query.
   * fl param: to limit the fields in the response.(eg: particular category defined(q=cat:electronics) and in that only some fields need to be retrieved(id,name).
@@ -125,3 +126,16 @@ bin/solr post -c techproducts exaple/exampledocs/*
 			- Phrase search using curl -> curl "http://localhost:8983/solr/techproducts/select?q=\"the**+**schema\""
     ```
     - **fl**: field parameter -> to limit the fields in the response.(eg: particular category defined(q=cat:electronics - **field search**) and in that only some fields need to be retrieved(id,name). 
+    - **fq**: filter query -> to filter the query results using some specified values in a field.
+    ```
+    curl "http://localhost:8983/solr/techproducts/select?q=foundation&fl=id,name&facet=true&fq=cat:electronics"
+    ```
+* **Facet Browsing**
+  * To narrow search results.
+  ```
+  curl "http://localhost:8983/solr/techproducts/select?q=foundation&fl=id,name&facet=true&facet.field=cat"
+  #show an extra field facet_count which shows the count of documents that have the same category(cat).
+  ```
+  * In response header one more field called facet_count shows the count of the specified field with the same value.
+  * Shows how many query results have each possible value.
+
