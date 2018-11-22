@@ -125,8 +125,7 @@ bin/solr start -e cloud
 	* Results are usually returned in xml format(can mold to other solr formats like JSON, php or ruby).
   * Response contains a response header and result.
   * Respose header: Have the parameters set for the query.
-  * fl param: to limit the fields in the response.(eg: particular category defined(q=cat:electronics) and in that only some fields need to be retrieved(id,name).
-  * 
+  
 
   * **Parameters**
     - **q**: query parameter -> to specify some direct words or phrases which will be searched in entire fields or can also specify the category. 
@@ -186,3 +185,15 @@ bin/solr start -e cloud
 
 #### Using htop to monitor processes
   * It shows our usage per CPU, as well as a meaningful text graph of your memory and swap usage right at the top
+
+#### Boosting
+  * There are two stages where documents can be boosted: 
+    * **At index time:-**
+      * Static
+    * **At query time:-**
+      * Dynamic and so doesnot need reindexing.
+      * Score is not actually assigned to document but to the subquery
+
+#### Request Handlers
+  * **/select** is a request handler that handles query requests.
+  * **/update** is a request handler that handles index updates (i.e., sending new documents to the index)
