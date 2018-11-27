@@ -1,5 +1,12 @@
 # POSTGRES
 * PostgreSQL is the first database management system that implements multi-version concurrency control (MVCC) feature  
+* Non-prompt password in psql
+```
+1. nano ~/.pgpass
+2. Provide -> localhost:port:database:user_name:password
+3. Execute command -> chmod 600 ~/.pgpass    #600 read and write permission only for owner
+   * setting read and write permissions only for owner.Prevent other users from reading the file.
+```
 * Enter into psql
 ```
 sudo -u postgres psql; 
@@ -165,7 +172,72 @@ ORDER BY
 \d table_name
 ```
 
-
+* **ROW_NUMBER**
+  * Window function
+  ```
+  window_function(arg1, arg2,..) OVER (PARTITION BY expression ORDER BY expression)
+  ```
+  * ROW_NUMBER, RANK, and DENSE_RANK functions
+    * assign integer values to the rows based on their order.
+    * **Row_number()**
+    ```
+    SELECT
+ product_name,
+ group_name,
+ price,
+ ROW_NUMBER () OVER (
+ PARTITION BY group_name
+ ORDER BY
+ price
+ )
+FROM
+ products
+INNER JOIN product_groups USING (group_id);
+    ```
+    ```
+     SELECT
+ product_name,
+ group_name,
+ price,
+ RANK() OVER (
+ PARTITION BY group_name
+ ORDER BY
+ price
+ )
+FROM
+ products
+INNER JOIN product_groups USING (group_id);
+```
+* **Except opearator**
+  *  return the rows in the first query that do not appear in the output of the second query.
+  ```
+  SELECT column_list
+FROM A
+WHERE condition_a
+EXCEPT 
+SELECT column_list
+FROM B
+WHERE condition_b;
+  ```
+* **Index**
+  * Lookups ie. act as pointer to data in table doesnot make changes to data.
+  ```
+  create index index_name on table_name;
+  ```
+  * Different index types
+    * B-tree(Default)
+    * Hash
+    * GiST
+    * SP-GiST
+    * GIN. E
+  * **Single column indexes**
+  ```
+  create index index_name on table_name(column);
+  ```
+  * **Multi-column indexes**
+  ```
+  create index index_name on table_name(column1, column2);
+  ```
 
 #### String Functions and Operators
 * Number of bits in string
