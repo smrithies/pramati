@@ -53,12 +53,21 @@ CREATE SCHEMA schema_name;
 ```
 UPDATE table_name SET field_name = new_value, [field_name2 = new_value] WHERE condition; 
 ```
-* Delete values or rows in a field
+* **Delete** values or rows in a field
 ```
 DELETE FROM table_name WHERE condition;
 
 DELETE FROM table_name;
+
+delete from table using another_table where condition_table1=condition_table2;
+
+
 ```
+* **upsert**
+  * **Returning clause** in delete
+  ```
+  DELETE FROM link_tmp RETURNING *;
+  ```
 * **Like** operator
 ```
 % - one or more characters
@@ -66,12 +75,36 @@ _ - one character
 
 SELECT FROM table_name WHERE LIKE ''; # Display number of rows retrieved
 ```
-* **LIMIT** AND **OFFSET**
+* **LIMIT** AND **OFFSET** and **FETCH**
 ```
 LIMIT - no of rows
 OFFSET - From where to start to retrieve
 
 SELECT * FROM table_name LIMIT no OFFSET no
+
+
+SSELECT * FROM table_name FETCH FIRST ROW ONLY;
+OR
+SELECT
+    film_id,
+    title
+FROM
+    film
+ORDER BY
+    title 
+FETCH FIRST 5 ROW ONLY;
+
+
+OR
+SELECT
+    film_id,
+    title
+FROM
+    film
+ORDER BY
+    title 
+OFFSET 5 ROWS 
+FETCH FIRST 5 ROW ONLY;   # Fetch next five rows after 1st five rows
 ```
 * ORDER BY DESC
 ```
@@ -171,7 +204,15 @@ ORDER BY
 ```
 \d table_name
 ```
+* **Joins**
+  * *Cross join*
+  ```
+  select * from table1 cross join table2
 
+  select * from table1, table2;
+
+  select * from table1 inner join table2 on true; 
+  ```
 * **ROW_NUMBER**
   * Window function
   ```
@@ -208,6 +249,54 @@ FROM
  products
 INNER JOIN product_groups USING (group_id);
 ```
+* **FIRST_VALUE , LAST_VALUE**
+  * *First_value*
+    ```
+    SELECT
+ product_name,
+ group_name,
+ price,
+ FIRST_VALUE (price) OVER (
+ PARTITION BY group_name
+ ORDER BY
+ price
+ ) AS lowest_price_per_group
+FROM
+ products
+INNER JOIN product_groups USING (group_id);
+    ```
+* **LAG and LEAD functions**
+  * *Lag*
+  ```
+  SELECT
+ product_name,
+ group_name,
+ price,
+ LAG (price, 1) OVER (
+ PARTITION BY group_name
+ ORDER BY
+ price
+ ) AS prev_price,
+ price - LAG (price, 1) OVER (
+ PARTITION BY group_name
+ ORDER BY
+ price
+ ) AS cur_prev_diff
+FROM
+ products
+INNER JOIN product_groups USING (group_id);
+  ```
+* **Subquery**
+  * Using where, in, exists.
+	* **ANY**
+	  * Similar to IN.
+	  * But x <> ANY (a,b,c) not equal to x NOT IN(a,b,c).
+	  * x <> ANY (a,b,c) -> x<>a or x<>b or x<>c
+	  * After where
+	* **ALL**
+	  * After where -> operator -> all -> then subquery
+	  * Compares a value to a list of values
+	* **EXISTS**
 * **Except opearator**
   *  return the rows in the first query that do not appear in the output of the second query.
   ```
