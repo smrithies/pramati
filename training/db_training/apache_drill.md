@@ -36,3 +36,52 @@ zk=local zk=local means the local node substitutes for the ZooKeeper node.
 ```
 !quit
 ```
+* Querying
+* Querying example files in classfilepath that is already added while drill is installed.
+  * Provide cp as 
+* **Querying schema-less plain text file(CSV)**
+  * Created a folder(Data) in home directory and a csv file inside the folder without any metadata(comma-separated values,no column names).
+  * Entered into web console
+  ```
+  http://localhost:8047
+  ```
+  * In query section queries are executed.
+  ```
+  select * from dfs.root`/home/smrithies/Data/sample.csv`
+
+
+	columns
+	["10","Smrithi"]
+	["20","Hari"]
+	["30","Raveena"]
+	["40","Athira"]
+	["50","Alankar"]
+
+  #display results as a single column with comma-separated values
+  ```
+  ```
+
+  select columns[0], columns[1] from dfs.root.`/home/smrithies/Data/sample.csv`
+
+
+	EXPR$0	EXPR$1
+	10		Smrithi
+	20		Hari
+	30		Raveena
+	40		Athira
+	50		Alankar
+  #splitting values separated by comma into columns.
+  ```
+  ```
+  select columns[0] as Age, columns[1] as Name from dfs.root.`/home/smrithies/Data/sample.csv`
+
+
+	Age Name
+	10	Smrithi
+	20	Hari
+	30	Raveena
+	40	Athira
+	50	Alankar
+
+  #able to split into columns and make alias for columns
+  ```
