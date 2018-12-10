@@ -1,8 +1,8 @@
 > All details related to a patent including its id, filing date, publication date, publication number etc..
    ```
-	SELECT *
-	FROM core.pats
-	WHERE patnum = 'US7290164B1';
+		SELECT *
+		FROM core.pats
+		WHERE patnum = 'US7290164B1';
    ```
 > Patent and its related claims.
 ```
