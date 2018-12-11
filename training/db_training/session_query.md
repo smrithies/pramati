@@ -5,9 +5,9 @@
 		WHERE patnum = 'US7290164B1';
 #### Patent and its related claims.
 >
->> SELECT *
->> FROM core.pat_claim_relationships
->> WHERE pat_claims_id = 167328526;
+>> SELECT *  
+>> FROM core.pat_claim_relationships  
+>> WHERE pat_claims_id = 167328526;  
 > Patent and its related litigations details. 
 ```
 		SELECT *
