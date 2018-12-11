@@ -3,7 +3,7 @@
 		SELECT *
 		FROM core.pats
 		WHERE patnum = 'US7290164B1';
-> #### Patent and its related claims.
+#### Patent and its related claims.
 >
 >> SELECT *
 >> FROM core.pat_claim_relationships
@@ -14,7 +14,7 @@
 		FROM core.lits_pats_map
 		WHERE patnum = '7290164';
 ```
-
+> Details of those who have filed a ptab case.
 
 ```
 		SELECT * 
